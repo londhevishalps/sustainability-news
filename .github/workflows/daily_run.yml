@@ -1,0 +1,29 @@
+.github/
+  workflows/
+name: Daily Sustainability News Update
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # Runs every day at 06:00 UTC
+  workflow_dispatch:        # Allows manual trigger too
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run sustainability script
+        run: |
+          python sustainability_news.py

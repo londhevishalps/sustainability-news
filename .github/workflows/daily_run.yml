@@ -25,4 +25,4 @@ jobs:
 
       - name: Run sustainability script
         run: |
-          python sustainability_news.py
+          python sustainability_updates.py

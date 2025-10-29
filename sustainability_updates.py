@@ -105,32 +105,74 @@ else:
     print("⚠️ No data to cluster.")
     df = pd.DataFrame()
 
-# ----------------------------
-# STEP 4: SUMMARIZE EACH CLUSTER
-# ----------------------------
-if not df.empty:
-    device = 0 if torch.cuda.is_available() else -1
-    summarizer = pipeline("summarization", model="facebook/bart-large-cnn", device=device)
+# --- Step 4: Summarize clustered articles (optimized for CPU / GitHub Actions) ---
 
-    summaries = []
-    for cluster_id in df["cluster"].unique():
-        cluster_texts = df[df["cluster"] == cluster_id]["text"].tolist()
-        combined_text = " ".join(cluster_texts)[:4000]  # keep manageable length
+import json
+import pandas as pd
+from transformers import pipeline
+from tqdm import tqdm
 
-        summary = summarizer(combined_text, max_length=180, min_length=60, do_sample=False)[0]["summary_text"]
+# Load clustered articles
+clustered_path = "filtered_articles.json"
+with open(clustered_path, "r", encoding="utf-8") as f:
+    clustered_data = json.load(f)
 
-        summaries.append({
-            "cluster_id": int(cluster_id),
-            "summary": summary,
-            "articles": df[df["cluster"] == cluster_id][["title", "link", "published"]].to_dict(orient="records")
-        })
+if not clustered_data:
+    raise ValueError("No clustered articles found. Check Step 3 results.")
 
-    with open(SUMMARIES_JSON, "w", encoding="utf-8") as f:
-        json.dump(summaries, f, ensure_ascii=False, indent=2)
+df = pd.DataFrame(clustered_data)
 
-    print(f"✅ Step 4 complete: summaries saved to {SUMMARIES_JSON}")
-else:
-    print("⚠️ No clusters to summarize.")
+# Initialize summarizer with smaller, CPU-friendly model
+summarizer = pipeline(
+    "summarization",
+    model="sshleifer/distilbart-cnn-12-6",
+    device=-1  # -1 means CPU
+)
+
+summaries = []
+
+# Process each cluster separately
+for cluster_id in df["cluster"].unique():
+    subset = df[df["cluster"] == cluster_id]
+
+    # Combine titles + summaries for input
+    joined_text = "\n\n".join(
+        f"- {row['title']} ({row['source']})\n{row['summary']}" for _, row in subset.iterrows()
+    )
+
+    # Count words
+    input_words = len(joined_text.split())
+
+    # Dynamically set max/min length (CPU-friendly)
+    max_len = max(20, min(100, input_words // 2))
+    min_len = max(10, max_len // 3)
+
+    # Summarize safely (catch errors)
+    try:
+        summary_text = summarizer(
+            joined_text,
+            max_length=max_len,
+            min_length=min_len,
+            do_sample=False
+        )[0]["summary_text"]
+    except Exception as e:
+        summary_text = "⚠️ Summary failed: " + str(e)
+
+    # Save cluster summary
+    summaries.append({
+        "cluster_id": int(cluster_id),
+        "summary": summary_text,
+        "sources": [row["source"] for _, row in subset.iterrows()],
+        "articles": subset.to_dict(orient="records")
+    })
+
+# Save final summaries to JSON
+summary_path = "filtered_articles.json"
+with open(summary_path, "w", encoding="utf-8") as f:
+    json.dump(summaries, f, ensure_ascii=False, indent=2)
+
+print(f"✅ Summarized news saved to JSON: {summary_path}")
+
 
 # ----------------------------
 # STEP 5: CREATE GRADIO INTERFACE

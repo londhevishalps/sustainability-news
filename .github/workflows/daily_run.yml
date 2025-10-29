@@ -2,27 +2,47 @@ name: Daily Sustainability News Update
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # runs daily at 06:00 UTC
-  workflow_dispatch:      # allows manual trigger from Actions UI
+    - cron: '0 7 * * *'  # Runs daily at 07:00 UTC
+  workflow_dispatch:
 
 jobs:
-  run:
+  run-news-script:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # 1️⃣ Checkout the repository
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false  # We will set our own token
 
+      # 2️⃣ Set up Python
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
-      - name: Upgrade pip and install dependencies
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run sustainability script
+      # 4️⃣ Run the sustainability script
+      - name: Run sustainability_updates.py
+        run: python sustainability_updates.py
+
+      # 5️⃣ Configure Git user
+      - name: Set up Git
         run: |
-          python sustainability_updates.py
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      # 6️⃣ Commit and push updated JSON if it changed
+      - name: Commit & Push updated JSON
+        run: |
+          git add filtered_articles.json
+          git diff --cached --quiet || git commit -m "Daily update of sustainability articles"
+          git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

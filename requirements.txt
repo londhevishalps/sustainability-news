@@ -5,5 +5,8 @@ openai
 pandas
 scikit-learn
 flask
-gradio
+pyngrok
 nltk
+torch
+transformers
+gradio

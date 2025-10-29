@@ -1,48 +1,46 @@
 name: Daily Sustainability News Update
 
+# Run every day at 08:00 UTC
 on:
   schedule:
-    - cron: '0 7 * * *'  # Runs daily at 07:00 UTC
-  workflow_dispatch:
+    - cron: "0 8 * * *"
+  workflow_dispatch:  # allows manual trigger
 
 jobs:
-  run-news-script:
+  update-news:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout the repository
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      # 1️⃣ Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          persist-credentials: false  # We will set our own token
+          persist-credentials: true  # Needed for push
 
       # 2️⃣ Set up Python
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       # 3️⃣ Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install lxml[html_clean]
 
-      # 4️⃣ Run the sustainability script
+      # 4️⃣ Run the news script
       - name: Run sustainability_updates.py
-        run: python sustainability_updates.py
+        run: |
+          python sustainability_updates.py
 
-      # 5️⃣ Configure Git user
-      - name: Set up Git
+      # 5️⃣ Commit and push updated JSON (filtered_articles.json)
+      - name: Commit & push updated JSON
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-      # 6️⃣ Commit and push updated JSON if it changed
-      - name: Commit & Push updated JSON
-        run: |
           git add filtered_articles.json
-          git diff --cached --quiet || git commit -m "Daily update of sustainability articles"
-          git push origin HEAD:main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git commit -m "Automated update of sustainability articles $(date +'%Y-%m-%d')"
+          git push
+        continue-on-error: true  # avoids failure if no changes

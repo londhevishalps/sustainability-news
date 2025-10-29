@@ -1,0 +1,9 @@
+feedparser
+newspaper3k
+sentence-transformers
+openai
+pandas
+scikit-learn
+flask
+gradio
+nltk

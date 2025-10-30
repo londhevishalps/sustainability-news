@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sustainability News</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #2a7f62; }
+    h2 { margin-top: 25px; }
+    ul { list-style: disc; margin-left: 20px; }
+    a { color: #1a0dab; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>🌍 Sustainability News Updates</h1>
+  <div id="news">Loading news...</div>
+
+  <script>
+    fetch('summarized_articles.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('news');
+        container.innerHTML = '';
+        data.forEach(cluster => {
+          const clusterDiv = document.createElement('div');
+          clusterDiv.innerHTML = `<h2>Cluster ${cluster.cluster_id}</h2>
+                                  <p>${cluster.summary}</p>
+                                  <ul>${cluster.articles.map(a => `<li><a href="${a.link}" target="_blank">${a.title}</a> (${a.published})</li>`).join('')}</ul>`;
+          container.appendChild(clusterDiv);
+        });
+      })
+      .catch(err => {
+        document.getElementById('news').innerText = '⚠️ Failed to load news.';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>

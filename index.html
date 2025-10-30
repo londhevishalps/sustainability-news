@@ -59,8 +59,14 @@
     .summary {
       font-style: italic;
       color: #555;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       flex: 1;
+    }
+
+    .source {
+      font-size: 0.85em;
+      color: #444;
+      margin-bottom: 10px;
     }
 
     ul { list-style: none; padding-left: 0; }
@@ -106,47 +112,49 @@
         }
 
         data.forEach(cluster => {
-          // Skip invalid summaries
-          if (!cluster.summary || cluster.summary.startsWith("⚠️ Summary failed")) return;
-
+          // If summary failed, still show articles
           const card = document.createElement('div');
           card.className = 'card';
 
-          // Image
           const img = document.createElement('img');
-          // Use first article image if exists, else placeholder
-          let imageUrl = cluster.articles && cluster.articles[0] && cluster.articles[0].image ? cluster.articles[0].image : 'https://via.placeholder.com/400x180?text=No+Image';
+          const imageUrl = cluster.articles && cluster.articles[0] && cluster.articles[0].image ? cluster.articles[0].image : 'https://via.placeholder.com/400x180?text=No+Image';
           img.src = imageUrl;
           card.appendChild(img);
 
-          // Content
           const contentDiv = document.createElement('div');
           contentDiv.className = 'card-content';
 
-          // Summary
+          // Summary or fallback
+          const summaryText = (!cluster.summary || cluster.summary.startsWith("⚠️ Summary failed")) 
+                              ? "No summary available for this cluster." 
+                              : cluster.summary;
+
           const summaryP = document.createElement('p');
           summaryP.className = 'summary';
-          summaryP.textContent = cluster.summary;
+          summaryP.textContent = summaryText;
           contentDiv.appendChild(summaryP);
 
-          // Articles
+          // Source
+          const sourceText = cluster.articles && cluster.articles[0] && cluster.articles[0].source ? cluster.articles[0].source : "Unknown source";
+          const sourceP = document.createElement('p');
+          sourceP.className = 'source';
+          sourceP.textContent = `Source: ${sourceText}`;
+          contentDiv.appendChild(sourceP);
+
+          // Articles list
           const ul = document.createElement('ul');
-          if (Array.isArray(cluster.articles) && cluster.articles.length > 0) {
-            cluster.articles.forEach(article => {
+          if (cluster.articles && cluster.articles.length > 0) {
+            cluster.articles.forEach(a => {
               const li = document.createElement('li');
-              const title = article.title || 'Untitled';
-              const link = article.link || '#';
-              const published = article.published ? ` (${article.published})` : '';
+              const title = a.title || "Untitled";
+              const link = a.link || "#";
+              const published = a.published ? ` (${a.published})` : '';
               li.innerHTML = `<a href="${link}" target="_blank" rel="noopener">${title}</a><span class="published">${published}</span>`;
               ul.appendChild(li);
             });
-          } else {
-            const li = document.createElement('li');
-            li.textContent = 'No articles available.';
-            ul.appendChild(li);
           }
-
           contentDiv.appendChild(ul);
+
           card.appendChild(contentDiv);
           container.appendChild(card);
         });

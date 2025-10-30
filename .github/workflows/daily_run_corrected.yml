@@ -1,0 +1,56 @@
+name: Daily Sustainability News Update
+
+on:
+  schedule:
+    - cron: "0 8 * * *" # run daily at 08:00 UTC
+  workflow_dispatch: # allow manual trigger
+
+permissions:
+  contents: write # required to allow push back to repo
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false # disable default credentials
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Note: The requirements.txt file should be updated with the corrected dependencies.
+          pip install --no-cache-dir -r requirements.txt
+
+      - name: Ensure nltk punkt (used by newspaper3k)
+        run: |
+          python <<'PY'
+          import nltk
+          try:
+              nltk.data.find("tokenizers/punkt")
+              print("nltk punkt already present")
+          except LookupError:
+              nltk.download("punkt")
+              print("Downloaded nltk punkt")
+          PY
+
+      - name: Run the sustainability update script (Improved Version)
+        run: |
+          # IMPORTANT: Ensure you have renamed 'sustainability_updates_improved.py' to 'sustainability_updates.py'
+          # or update this line to match your file name.
+          python sustainability_updates.py
+        continue-on-error: false # fail visibly if something breaks
+
+      - name: Commit & push updated outputs
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add filtered_articles.json clustered_articles.json summarized_articles.json
+          git commit -m "Automated: Update sustainability news data" || echo "No changes to commit"
+          git push

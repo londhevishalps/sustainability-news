@@ -1,171 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>🌿 Sustainability News | Curated by Vishal Londhe</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: "Helvetica Neue", Arial, sans-serif; background: #f4f4f4; color: #222; line-height: 1.5; }
+    <meta charset="UTF-8">
+    <title>🌿 Sustainability News | Curated by Vishal Londhe</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: "Helvetica Neue", Arial, sans-serif; background: #f4f4f4; color: #222; line-height: 1.5; }
 
-    header {
-      background: #2a7f62; /* Green for sustainability */
-      color: white;
-      padding: 30px 0;
-      text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-    }
-    header span {
-      font-size: 0.7em;
-      display: block;
-      font-weight: normal;
-      margin-top: 5px;
-    }
-
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s;
-    }
-
-    .card:hover { transform: translateY(-3px); }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 15px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .summary {
-      font-style: italic;
-      color: #555;
-      margin-bottom: 10px;
-      flex: 1;
-    }
-
-    .source {
-      font-size: 0.85em;
-      color: #444;
-      margin-bottom: 10px;
-    }
-
-    ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 8px; }
-    a { text-decoration: none; color: #1a0dab; font-weight: bold; }
-    a:hover { text-decoration: underline; }
-    .published { display: block; font-size: 0.8em; color: #888; margin-top: 2px; }
-
-    footer {
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
-      color: #888;
-      font-size: 0.85em;
-      border-top: 1px solid #ddd;
-    }
-
-    .loading { text-align: center; padding: 40px; font-weight: bold; color: #2a7f62; }
-  </style>
-</head>
-<body>
-  <header>
-    🌿 Sustainability News
-    <span>Curated by Vishal Londhe</span>
-  </header>
-
-  <main id="news" class="loading">Loading news...</main>
-
-  <footer>&copy; 2025 Sustainability News Updates. Powered by GitHub Pages.</footer>
-
-  <script>
-    async function loadNews() {
-      const container = document.getElementById('news');
-      try {
-        const response = await fetch('summarized_articles.json');
-        if (!response.ok) throw new Error('Failed to fetch JSON');
-        const data = await response.json();
-
-        container.innerHTML = '';
-        if (!data || data.length === 0) {
-          container.innerHTML = '<p>No news available currently.</p>';
-          return;
+        header {
+            background: #2a7f62; /* Green for sustainability */
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
         }
 
-        data.forEach(cluster => {
-          // If summary failed, still show articles
-          const card = document.createElement('div');
-          card.className = 'card';
+        header span {
+            font-size: 0.7em;
+            display: block;
+            font-weight: normal;
+            margin-top: 5px;
+        }
 
-          const img = document.createElement('img');
-          const imageUrl = cluster.articles && cluster.articles[0] && cluster.articles[0].image ? cluster.articles[0].image : 'https://via.placeholder.com/400x180?text=No+Image';
-          img.src = imageUrl;
-          card.appendChild(img);
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-          const contentDiv = document.createElement('div');
-          contentDiv.className = 'card-content';
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s;
+        }
 
-          // Summary or fallback
-          const summaryText = (!cluster.summary || cluster.summary.startsWith("⚠️ Summary failed")) 
-                              ? "No summary available for this cluster." 
-                              : cluster.summary;
+        .card:hover { transform: translateY(-3px); }
 
-          const summaryP = document.createElement('p');
-          summaryP.className = 'summary';
-          summaryP.textContent = summaryText;
-          contentDiv.appendChild(summaryP);
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
 
-          // Source
-          const sourceText = cluster.articles && cluster.articles[0] && cluster.articles[0].source ? cluster.articles[0].source : "Unknown source";
-          const sourceP = document.createElement('p');
-          sourceP.className = 'source';
-          sourceP.textContent = `Source: ${sourceText}`;
-          contentDiv.appendChild(sourceP);
+        .card-content {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
-          // Articles list
-          const ul = document.createElement('ul');
-          if (cluster.articles && cluster.articles.length > 0) {
-            cluster.articles.forEach(a => {
-              const li = document.createElement('li');
-              const title = a.title || "Untitled";
-              const link = a.link || "#";
-              const published = a.published ? ` (${a.published})` : '';
-              li.innerHTML = `<a href="${link}" target="_blank" rel="noopener">${title}</a><span class="published">${published}</span>`;
-              ul.appendChild(li);
-            });
-          }
-          contentDiv.appendChild(ul);
+        .card-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #2a7f62;
+        }
 
-          card.appendChild(contentDiv);
-          container.appendChild(card);
+        .card-content p {
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .card-content ul {
+            list-style: none;
+            padding: 0;
+            margin-top: auto; /* Push the list to the bottom */
+        }
+
+        .card-content li {
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .card-content li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .card-content li a:hover {
+            text-decoration: underline;
+        }
+
+        .source-link {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        .date {
+            font-size: 0.8em;
+            color: #999;
+            margin-left: 5px;
+        }
+
+        /* Color-coding for clusters */
+        .cluster-1 { border-top: 5px solid #4CAF50; /* Green */ }
+        .cluster-2 { border-top: 5px solid #FFC107; /* Yellow/Orange */ }
+        .cluster-3 { border-top: 5px solid #2196F3; /* Blue */ }
+        .cluster-4 { border-top: 5px solid #E91E63; /* Pink/Red */ }
+        .cluster-5 { border-top: 5px solid #9C27B0; /* Purple */ }
+    </style>
+</head>
+<body>
+    <header>
+        🌿 Sustainability News
+        <span>Curated by Vishal Londhe</span>
+    </header>
+
+    <main id="news-container">
+        <!-- News cards will be injected here by the script -->
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('clustered_articles.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('news-container');
+                    data.forEach((cluster, index) => {
+                        const card = document.createElement('div');
+                        card.className = `card cluster-${(index % 5) + 1}`;
+
+                        // Image placeholder - ISSUE 1: Hardcoded src
+                        const imageUrl = cluster.image_url || 'https://via.placeholder.com/400x180/2a7f62/ffffff?text=No+Image+Available'; // Fallback to a placeholder
+                        card.innerHTML += `<img src="${imageUrl}" alt="Cluster Image">`;
+
+                        const content = document.createElement('div');
+                        content.className = 'card-content';
+
+                        // Summary is now correctly handled by the Python script to ensure it's a string
+                        content.innerHTML += `<h3>${cluster.summary}</h3>`;
+
+                        // Source link
+                        content.innerHTML += `<span class="source-link">Source: ${cluster.source_link || 'N/A'}</span>`;
+
+                        // Articles list
+                        const ul = document.createElement('ul');
+                        cluster.articles.forEach(article => {
+                            const li = document.createElement('li');
+                            // Article link is created correctly
+                            li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a> <span class="date">(${article.date})</span>`; // Added target="_blank" for better UX
+                            ul.appendChild(li);
+                        });
+                        content.appendChild(ul);
+
+                        card.appendChild(content);
+                        container.appendChild(card);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching or processing clustered articles:', error);
+                    document.getElementById('news-container').innerHTML = '<p>Failed to load news. Check console for details.</p>';
+                });
         });
-
-      } catch (err) {
-        container.innerHTML = `<p style="color:red; text-align:center;">⚠️ Failed to load news: ${err.message}</p>`;
-        console.error(err);
-      }
-    }
-
-    loadNews();
-  </script>
+    </script>
 </body>
 </html>

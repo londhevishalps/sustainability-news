@@ -2,39 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sustainability News</title>
+  <title>🌍 Sustainability News Updates</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    h1 { color: #2a7f62; }
-    h2 { margin-top: 25px; }
-    ul { list-style: disc; margin-left: 20px; }
-    a { color: #1a0dab; text-decoration: none; }
+    /* Reset & basic */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Helvetica Neue", Arial, sans-serif; background: #f4f4f4; color: #222; line-height: 1.5; }
+
+    /* Header */
+    header {
+      background: #bb1f2d;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Main container */
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Cluster card */
+    .cluster {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+
+    .cluster:hover { transform: translateY(-3px); }
+
+    .cluster h2 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      color: #bb1f2d;
+    }
+
+    .summary {
+      font-style: italic;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #1a0dab;
+      font-weight: bold;
+    }
+
     a:hover { text-decoration: underline; }
+
+    .published {
+      display: block;
+      font-size: 0.85em;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      color: #888;
+      font-size: 0.85em;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Loading / error message */
+    .loading { text-align: center; padding: 40px; font-weight: bold; color: #bb1f2d; }
   </style>
 </head>
 <body>
-  <h1>🌍 Sustainability News Updates</h1>
-  <div id="news">Loading news...</div>
+  <header>🌍 Sustainability News Updates</header>
+
+  <main id="news" class="loading">Loading news...</main>
+
+  <footer>&copy; 2025 Sustainability News Updates. Powered by GitHub Pages.</footer>
 
   <script>
-    fetch('summarized_articles.json')
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('news');
+    async function loadNews() {
+      const container = document.getElementById('news');
+      try {
+        const response = await fetch('summarized_articles.json');
+        if (!response.ok) throw new Error('Failed to fetch JSON');
+        const data = await response.json();
+
         container.innerHTML = '';
+        if (data.length === 0) {
+          container.innerHTML = '<p>No news available currently.</p>';
+          return;
+        }
+
         data.forEach(cluster => {
           const clusterDiv = document.createElement('div');
-          clusterDiv.innerHTML = `<h2>Cluster ${cluster.cluster_id}</h2>
-                                  <p>${cluster.summary}</p>
-                                  <ul>${cluster.articles.map(a => `<li><a href="${a.link}" target="_blank">${a.title}</a> (${a.published})</li>`).join('')}</ul>`;
+          clusterDiv.className = 'cluster';
+
+          // Cluster title
+          const h2 = document.createElement('h2');
+          h2.textContent = `Cluster ${cluster.cluster_id}`;
+          clusterDiv.appendChild(h2);
+
+          // Summary
+          const summaryP = document.createElement('p');
+          summaryP.className = 'summary';
+          summaryP.textContent = cluster.summary || 'No summary available.';
+          clusterDiv.appendChild(summaryP);
+
+          // Articles list
+          const ul = document.createElement('ul');
+          if (Array.isArray(cluster.articles) && cluster.articles.length > 0) {
+            cluster.articles.forEach(article => {
+              const li = document.createElement('li');
+              const title = article.title || 'Untitled';
+              const link = article.link || '#';
+              const published = article.published ? ` (${article.published})` : '';
+              li.innerHTML = `<a href="${link}" target="_blank" rel="noopener">${title}</a><span class="published">${published}</span>`;
+              ul.appendChild(li);
+            });
+          } else {
+            const li = document.createElement('li');
+            li.textContent = 'No articles available.';
+            ul.appendChild(li);
+          }
+
+          clusterDiv.appendChild(ul);
           container.appendChild(clusterDiv);
         });
-      })
-      .catch(err => {
-        document.getElementById('news').innerText = '⚠️ Failed to load news.';
+
+      } catch (err) {
+        container.innerHTML = `<p style="color:red; text-align:center;">⚠️ Failed to load news: ${err.message}</p>`;
         console.error(err);
-      });
+      }
+    }
+
+    loadNews();
   </script>
 </body>
 </html>
-Add index.html for GitHub Pages

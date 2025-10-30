@@ -109,50 +109,56 @@ save_json(RAW_JSON, articles)
 print(f"✅ Step 1 complete: {len(articles)} articles saved to {RAW_JSON}")
 
 # ----------------------------
-# STEP 2: EXTRACT FULL TEXT FROM ARTICLES
+# STEP 2: EXTRACT FULL TEXT, SOURCE, AND IMAGE FROM ARTICLES
 # ----------------------------
-def ensure_nltk_for_newspaper():
-    # newspaper requires punkt; attempt to download if missing
-    try:
-        import nltk
-        nltk.data.find("tokenizers/punkt")
-    except Exception:
-        try:
-            import nltk
-            nltk.download("punkt")
-        except Exception as e:
-            print(f"⚠️ Could not download nltk punkt: {e} (newspaper may fail on some sites)")
+import newspaper
+import json
 
-def extract_full_text(article_list: List[Dict]) -> List[Dict]:
-    ensure_nltk_for_newspaper()
+def extract_full_text(article_list):
     extracted = []
-    for art in tqdm(article_list, desc="Extracting articles", unit="article"):
-        link = art.get("link")
-        if not link:
-            continue
+    for art in article_list:
         try:
-            a = newspaper.Article(link)
+            # Initialize newspaper article
+            a = newspaper.Article(art["link"])
             a.download()
             a.parse()
-            text = a.text.strip()
-            if not text:
-                # skip empty extraction
-                print(f"⚠️ Empty text for {link}")
-                continue
+
+            # Get source: either from RSS feed, newspaper detected, or fallback
+            source_name = art.get("source") or getattr(a, "source_url", None) or "Unknown source"
+
+            # Get top image (empty string if not found)
+            top_image = getattr(a, "top_image", "") or ""
+
+            # Append extracted article info
             extracted.append({
-                "title": art.get("title", "")[:300],
-                "link": link,
+                "title": art.get("title", "Untitled"),
+                "link": art.get("link", "#"),
                 "published": art.get("published", ""),
-                "source": art.get("source", ""),
-                "text": text
+                "text": getattr(a, "text", ""),
+                "source": source_name,
+                "image": top_image
             })
+
         except Exception as e:
-            print(f"⚠️ Skipped: {link} ({e})")
+            # Skip articles that fail but continue processing
+            print(f"⚠️ Skipped: {art.get('link', 'Unknown')} ({e})")
+
     return extracted
 
-raw_articles = load_json(RAW_JSON)
+# Load raw articles saved in Step 1
+RAW_JSON = "raw_articles.json"
+FILTERED_JSON = "filtered_articles.json"
+
+with open(RAW_JSON, "r", encoding="utf-8") as f:
+    raw_articles = json.load(f)
+
+# Extract full text, source, and image
 filtered_articles = extract_full_text(raw_articles)
-save_json(FILTERED_JSON, filtered_articles)
+
+# Save to filtered JSON for Step 3
+with open(FILTERED_JSON, "w", encoding="utf-8") as f:
+    json.dump(filtered_articles, f, indent=2, ensure_ascii=False)
+
 print(f"✅ Step 2 complete: {len(filtered_articles)} articles saved to {FILTERED_JSON}")
 
 # ----------------------------

@@ -1,10 +1,9 @@
 name: Daily Sustainability News Update
 
-# Run every day at 08:00 UTC
 on:
   schedule:
-    - cron: "0 8 * * *"
-  workflow_dispatch:  # allows manual trigger
+    - cron: "0 8 * * *"  # Run daily at 08:00 UTC
+  workflow_dispatch:
 
 jobs:
   update-news:
@@ -15,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: true  # Needed for push
+          persist-credentials: true
 
       # 2️⃣ Set up Python
       - name: Setup Python
@@ -27,20 +26,20 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install lxml[html_clean]
+          pip install --no-cache-dir -r requirements.txt
+          pip install --no-cache-dir lxml[html_clean]
 
       # 4️⃣ Run the news script
       - name: Run sustainability_updates.py
         run: |
           python sustainability_updates.py
 
-      # 5️⃣ Commit and push updated JSON (filtered_articles.json)
-      - name: Commit & push updated JSON
+      # 5️⃣ Commit and push updated JSON (final output)
+      - name: Commit & push summarized articles
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add filtered_articles.json
-          git commit -m "Automated update of sustainability articles $(date +'%Y-%m-%d')"
+          git add summarized_articles.json
+          git commit -m "Automated sustainability summary update $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push
-        continue-on-error: true  # avoids failure if no changes
+        continue-on-error: true

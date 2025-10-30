@@ -1,12 +1,9 @@
 feedparser
 newspaper3k
-sentence-transformers
-openai
 pandas
 scikit-learn
-flask
-pyngrok
-nltk
-torch
+sentence-transformers
 transformers
+torch
+tqdm
 gradio

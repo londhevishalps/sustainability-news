@@ -2,44 +2,52 @@ name: Daily Sustainability News Update
 
 on:
   schedule:
-    - cron: "0 8 * * *"  # Run daily at 08:00 UTC
+    - cron: "0 8 * * *"  # daily at 08:00 UTC
   workflow_dispatch:
 
 jobs:
   update-news:
     runs-on: ubuntu-latest
-
     steps:
-      # 1️⃣ Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           persist-credentials: true
 
-      # 2️⃣ Set up Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.12"
 
-      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install --no-cache-dir -r requirements.txt
-          pip install --no-cache-dir lxml[html_clean]
 
-      # 4️⃣ Run the news script
-      - name: Run sustainability_updates.py
+      - name: Ensure nltk punkt for newspaper (safe)
+        run: |
+          python - <<'PY'
+          try:
+              import nltk
+              nltk.data.find("tokenizers/punkt")
+              print("nltk punkt already present")
+          except Exception:
+              import nltk
+              nltk.download("punkt")
+              print("Downloaded nltk punkt")
+          PY
+
+      - name: Run the news script
         run: |
           python sustainability_updates.py
+        # let job fail if script fails so you see errors in Actions
+        continue-on-error: false
 
-      # 5️⃣ Commit and push updated JSON (final output)
       - name: Commit & push summarized articles
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add summarized_articles.json
-          git commit -m "Automated sustainability summary update $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git add summarized_articles.json clustered_articles.json filtered_articles.json || true
+          git commit -m "Automated sustainability update: $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push
         continue-on-error: true

@@ -2,18 +2,13 @@
 """
 sustainability_updates_improved.py
 
-Flow:
-1) Fetch RSS -> raw_articles.json
-2) Extract full text -> filtered_articles.json
-3) Cluster -> clustered_articles.json
-4) Summarize clusters -> summarized_articles.json
+Generates:
+- raw_articles.json
+- filtered_articles.json
+- clustered_articles.json
+- summarized_articles.json
 
-Improvements:
-- CPU-friendly summarization for GitHub Actions
-- Cluster headlines for frontend UX
-- Image fallback from newspaper top image
-- Parallel text extraction
-- Logging for errors
+Includes images and sources for frontend display.
 """
 
 import os
@@ -27,14 +22,11 @@ import feedparser
 import newspaper
 from tqdm import tqdm
 
-# NLP imports
 from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
 from transformers import pipeline
 
-# ----------------------------
-# CONFIG
-# ----------------------------
+# ---------------- CONFIG ----------------
 RAW_JSON = "raw_articles.json"
 FILTERED_JSON = "filtered_articles.json"
 CLUSTERED_JSON = "clustered_articles.json"
@@ -42,7 +34,7 @@ SUMMARIES_JSON = "summarized_articles.json"
 
 NUM_CLUSTERS = 5
 CUTOFF_DAYS = 7
-MAX_WORKERS = 4  # GitHub Actions CPU-friendly
+MAX_WORKERS = 8
 
 RSS_FEEDS = [
     "https://news.un.org/feed/subscribe/en/news/topic/climate-change/feed/rss.xml",
@@ -52,18 +44,10 @@ RSS_FEEDS = [
     "https://www.euractiv.com/section/energy-environment/feed/"
 ]
 
-# ----------------------------
-# UTIL FUNCTIONS
-# ----------------------------
+# ---------------- UTIL ----------------
 def save_json(path: str, obj):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
-
-def load_json(path: str, default=None):
-    if not os.path.exists(path):
-        return default
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
 
 def parse_date(date_str: str) -> Optional[datetime]:
     formats = [
@@ -81,18 +65,15 @@ def parse_date(date_str: str) -> Optional[datetime]:
             continue
     return None
 
-def extract_image_url(entry, newspaper_article=None) -> Optional[str]:
-    """Extract image from RSS entry or fallback to newspaper top_image."""
-    # RSS fields
-    for field in ['media_content', 'enclosures']:
-        if hasattr(entry, field):
-            items = getattr(entry, field)
-            if items:
-                for item in items:
-                    if isinstance(item, dict) and 'url' in item and 'image' in item['url'].lower():
-                        return item['url']
-
-    # Check summary/content for <img>
+def extract_image_url(entry) -> Optional[str]:
+    if hasattr(entry, 'media_content') and entry.media_content:
+        for media in entry.media_content:
+            if 'url' in media and media.get('type', '').startswith('image'):
+                return media['url']
+    if hasattr(entry, 'enclosures') and entry.enclosures:
+        for enc in entry.enclosures:
+            if enc.get('type', '').startswith('image'):
+                return enc['href']
     for field in ['summary', 'description', 'content']:
         if hasattr(entry, field):
             content = getattr(entry, field)
@@ -101,73 +82,55 @@ def extract_image_url(entry, newspaper_article=None) -> Optional[str]:
             match = re.search(r'<img[^>]+src=["\'](.*?)["\']', content, re.IGNORECASE)
             if match:
                 return match.group(1)
-
-    # Fallback to newspaper top image
-    if newspaper_article and newspaper_article.top_image:
-        return newspaper_article.top_image
-
     return None
 
-# ----------------------------
-# STEP 1: FETCH RSS
-# ----------------------------
+# ---------------- STEP 1: FETCH RSS ----------------
 def fetch_rss(feeds: List[str]) -> List[Dict]:
     all_articles = []
     cutoff_date = datetime.now() - timedelta(days=CUTOFF_DAYS)
-
     for url in tqdm(feeds, desc="Fetching RSS Feeds"):
         try:
             feed = feedparser.parse(url)
             feed_title = getattr(feed.feed, 'title', url)
             for entry in feed.entries:
-                try:
-                    pub_date_str = getattr(entry, 'published', None)
-                    pub_date = None
-                    if pub_date_str:
-                        pub_date = parse_date(pub_date_str)
-                    elif getattr(entry, 'published_parsed', None):
-                        pub_date_struct = entry.published_parsed
-                        pub_date = datetime(*pub_date_struct[:6])
-
-                    if not pub_date or pub_date < cutoff_date:
-                        continue
-
-                    summary_text = getattr(entry, 'summary', '')
-                    if not summary_text and getattr(entry, 'content', None):
-                        summary_text = entry.content[0].get('value', '')
-
-                    article = {
-                        "title": entry.title,
-                        "url": entry.link,
-                        "date": pub_date.strftime("%Y-%m-%d"),
-                        "source": feed_title,
-                        "text": summary_text,
-                        "image_url": extract_image_url(entry),
-                        "cluster_id": -1,
-                    }
-                    all_articles.append(article)
-                except Exception as e:
-                    print(f"⚠️ Skipped entry: {e}")
+                pub_date_str = getattr(entry, 'published', None)
+                if pub_date_str:
+                    pub_date = parse_date(pub_date_str)
+                else:
+                    pub_date_struct = getattr(entry, 'published_parsed', None)
+                    pub_date = datetime(*pub_date_struct[:6]) if pub_date_struct else None
+                if not pub_date or pub_date < cutoff_date:
                     continue
-        except Exception as e:
-            print(f"⚠️ Failed feed {url}: {e}")
+                summary_text = getattr(entry, 'summary', '')
+                if not summary_text and hasattr(entry, 'content') and entry.content:
+                    summary_text = entry.content[0].get('value', '')
+                article = {
+                    "title": getattr(entry, 'title', 'No title'),
+                    "url": getattr(entry, 'link', ''),
+                    "date": pub_date.strftime("%Y-%m-%d"),
+                    "source": feed_title,
+                    "text": summary_text,
+                    "image_url": extract_image_url(entry),
+                    "cluster_id": -1,
+                }
+                all_articles.append(article)
+        except Exception:
             continue
     return all_articles
 
-# ----------------------------
-# STEP 2: EXTRACT FULL TEXT (Parallel)
-# ----------------------------
+# ---------------- STEP 2: EXTRACT FULL TEXT ----------------
 def _process_article_text(article: Dict) -> Optional[Dict]:
-    try:
-        if not article["text"] or len(article["text"]) < 100:
+    if not article["text"] or len(article["text"]) < 100:
+        try:
             a = newspaper.Article(article["url"])
             a.download()
             a.parse()
             article["text"] = a.text
-            article["image_url"] = extract_image_url(article, a)
-    except Exception as e:
-        print(f"⚠️ Text extraction failed for {article['url']}: {e}")
-    if article["text"] and len(article["text"]) > 100:
+            if not article["image_url"]:
+                article["image_url"] = a.top_image or None
+        except Exception:
+            pass
+    if article["text"] and len(article["text"]) > 200:
         return article
     return None
 
@@ -178,17 +141,14 @@ def extract_full_text_parallel(articles: List[Dict]) -> List[Dict]:
             total=len(articles),
             desc="Extracting Full Text"
         ))
-    return [r for r in results if r is not None]
+    return [res for res in results if res]
 
-# ----------------------------
-# STEP 3: CLUSTER
-# ----------------------------
+# ---------------- STEP 3: CLUSTER ----------------
 def cluster_articles(articles: List[Dict], num_clusters: int, model: SentenceTransformer) -> List[Dict]:
     if len(articles) < num_clusters:
         for article in articles:
             article["cluster_id"] = 0
         return articles
-
     texts = [f"{a['title']} {a['text'][:500]}" for a in articles]
     embeddings = model.encode(texts, show_progress_bar=False)
     kmeans = KMeans(n_clusters=num_clusters, random_state=0, n_init='auto')
@@ -197,79 +157,71 @@ def cluster_articles(articles: List[Dict], num_clusters: int, model: SentenceTra
         articles[i]["cluster_id"] = int(label)
     return articles
 
-# ----------------------------
-# STEP 4: SUMMARIZE
-# ----------------------------
+# ---------------- STEP 4: SUMMARIZE ----------------
 def summarize_clusters(articles: List[Dict], summarizer_pipeline) -> List[Dict]:
     clusters = {}
     for article in articles:
-        cid = article["cluster_id"]
-        clusters.setdefault(cid, {"articles": [], "headline": "", "summary": "", "image_url": None})
-        clusters[cid]["articles"].append(article)
+        cluster_id = article["cluster_id"]
+        if cluster_id not in clusters:
+            clusters[cluster_id] = {
+                "articles": [],
+                "summary": "",
+                "image_url": None,
+                "source_link": "",
+            }
+        clusters[cluster_id]["articles"].append(article)
 
-    for cid, cluster in clusters.items():
-        cluster["articles"].sort(key=lambda x: x["date"], reverse=True)
-        most_recent = cluster["articles"][0]
-        cluster["headline"] = most_recent["title"]
-        cluster["image_url"] = most_recent["image_url"]
+    for cluster_id in clusters:
+        clusters[cluster_id]["articles"].sort(key=lambda x: x["date"], reverse=True)
+        most_recent = clusters[cluster_id]["articles"][0]
+        clusters[cluster_id]["image_url"] = most_recent["image_url"]
+        clusters[cluster_id]["source_link"] = most_recent["source"]
 
-    MAX_SUMMARY_CHARS = 10000
-    for cid, cluster in tqdm(clusters.items(), desc="Summarizing Clusters"):
-        combined_text = " ".join([a["text"] for a in cluster["articles"][:3]])
-        combined_text = combined_text[:MAX_SUMMARY_CHARS]
+    MAX_SUMMARY_INPUT = 10000
+    for cluster_id, data in tqdm(clusters.items(), desc="Summarizing Clusters"):
+        combined_text = " ".join([a["text"] for a in data["articles"][:3]])
+        combined_text = combined_text[:MAX_SUMMARY_INPUT]
+        summary_text = "No summary available."
         try:
-            summary = summarizer_pipeline(
-                combined_text,
-                max_length=150,
-                min_length=30,
-                do_sample=False
+            summary_text = summarizer_pipeline(
+                combined_text, max_length=150, min_length=30, do_sample=False
             )[0]["summary_text"]
-            cluster["summary"] = summary
-        except Exception as e:
-            print(f"⚠️ Summary failed for cluster {cid}: {e}")
-            cluster["summary"] = "No summary available."
+        except Exception:
+            pass
+        data["summary"] = summary_text
 
     return [clusters[k] for k in sorted(clusters.keys())]
 
-# ----------------------------
-# MAIN
-# ----------------------------
+# ---------------- MAIN ----------------
 def main():
-    print("--- Loading NLP Models ---")
+    print("Loading NLP models...")
     try:
         sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
-        summarizer_pipeline = pipeline(
-            "summarization",
-            model="sshleifer/distilbart-cnn-12-6",
-            device=-1
-        )
+        summarizer_pipeline = pipeline("summarization", model="facebook/bart-large-cnn")
     except Exception as e:
-        print(f"❌ Failed to load models: {e}")
+        print(f"Error loading models: {e}")
         return
 
-    print("--- Step 1: Fetch RSS ---")
+    print("Fetching RSS articles...")
     articles = fetch_rss(RSS_FEEDS)
     save_json(RAW_JSON, articles)
-    print(f"Fetched {len(articles)} raw articles.")
 
-    print("--- Step 2: Extract Full Text ---")
+    print("Extracting full text...")
     articles = extract_full_text_parallel(articles)
     save_json(FILTERED_JSON, articles)
-    print(f"{len(articles)} articles with substantial text.")
-
     if not articles:
         save_json(CLUSTERED_JSON, [])
-        print("No articles to process. Exiting.")
+        save_json(SUMMARIES_JSON, [])
         return
 
-    print("--- Step 3: Cluster Articles ---")
+    print(f"Clustering into {NUM_CLUSTERS} clusters...")
     articles = cluster_articles(articles, NUM_CLUSTERS, sbert_model)
 
-    print("--- Step 4: Summarize Clusters ---")
+    print("Summarizing clusters...")
     final_data = summarize_clusters(articles, summarizer_pipeline)
-    save_json(SUMMARIES_JSON, final_data)
     save_json(CLUSTERED_JSON, final_data)
-    print(f"Processed into {len(final_data)} clusters.")
+    save_json(SUMMARIES_JSON, final_data)
+    print(f"Processed {len(final_data)} clusters successfully.")
 
 if __name__ == "__main__":
     main()

@@ -47,7 +47,7 @@ jobs:
       # 5️⃣ Run the sustainability update script
       - name: Run the news script
         run: |
-          python sustainability_updates.py
+          python sustainability_updates_improved.py
         continue-on-error: false  # fail visibly if something breaks
 
       # 6️⃣ Commit & push updated JSON files

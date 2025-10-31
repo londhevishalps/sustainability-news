@@ -3,32 +3,15 @@
     "cluster_id": 0,
     "summary": "⚠️ Summary failed: index out of range in self",
     "sources": [
+      "UN News - Global perspective Human stories",
       "https://www.theguardian.com"
     ],
     "articles": [
       {
-        "title": "US climate activists condemn 18-month jail term for nonviolent art museum protester",
-        "link": "https://www.theguardian.com/us-news/2025/oct/30/climate-activist-art-protest-jail-term",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "One year after a historic dam removal, teens inspire river restoration worldwide: ‘It turns out you can win’",
-        "link": "https://www.theguardian.com/us-news/2025/oct/25/klamath-river-restoration-teenagers",
-        "published": "2025-10-25",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Insurers calling for trees to be felled as cheap fix for subsidence, say critics",
-        "link": "https://www.theguardian.com/environment/2025/oct/30/insurers-calling-for-trees-to-be-felled-as-cheap-fix-for-subsidence-say-critics",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "The luxury effect: why you’ll find more wildlife in wealthy areas – and what it means for your health",
-        "link": "https://www.theguardian.com/environment/2025/oct/30/rich-lizards-luxury-effect-more-plants-wildlife-wealthier-suburbs-health-aoe",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
+        "title": "High stakes and high flavour: Indigenous chef brings Amazonian soul to COP30",
+        "link": "https://news.un.org/feed/view/en/story/2025/10/1166173",
+        "published": "2025-10-26",
+        "source": "UN News - Global perspective Human stories"
       },
       {
         "title": "How a radical experiment to bring a forest into a preschool transformed children’s health",
@@ -46,18 +29,6 @@
         "title": "The acquisitions of a fortunate life have accumulated over the years. All must be culled while I have the wherewithal | Paul Daley",
         "link": "https://www.theguardian.com/environment/commentisfree/2025/oct/27/amassed-belongings-overflowing-time-cull-tidy",
         "published": "2025-10-27",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "When the rains don’t come: how drought and endless dry seasons are changing life in Puntland – in pictures",
-        "link": "https://www.theguardian.com/global-development/gallery/2025/oct/30/when-the-rains-dont-come-how-drought-and-endless-dry-seasons-are-changing-life-in-puntland-in-pictures",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Week in wildlife: a ferocious wildcat, a cheeky seal and a disgruntled lioness",
-        "link": "https://www.theguardian.com/environment/gallery/2025/oct/24/week-in-wildlife-a-ferocious-wildcat-a-cheeky-seal-and-a-disgruntled-lioness",
-        "published": "2025-10-24",
         "source": "https://www.theguardian.com"
       }
     ]
@@ -107,21 +78,33 @@
         "source": "https://www.theguardian.com"
       },
       {
+        "title": "‘Trump doesn’t represent us’: US activist groups to push for climate action at Cop30 in Brazil",
+        "link": "https://www.theguardian.com/environment/2025/oct/28/cop30-us-climate-trump",
+        "published": "2025-10-28",
+        "source": "https://www.theguardian.com"
+      },
+      {
         "title": "Two crucial Florida coral species left ‘functionally extinct’ by ocean heatwave",
         "link": "https://www.theguardian.com/environment/2025/oct/27/coral-florida-functionally-extinct-climate-crisis",
         "published": "2025-10-27",
         "source": "https://www.theguardian.com"
       },
       {
-        "title": "Ken Henry warns ‘conga line of developers’ would try to exploit exemptions in Labor’s proposed nature laws",
-        "link": "https://www.theguardian.com/australia-news/2025/oct/30/ken-henry-warns-labors-nature-laws-are-worthless-unless-minister-tightens-national-interest-exemptions",
+        "title": "One year after a historic dam removal, teens inspire river restoration worldwide: ‘It turns out you can win’",
+        "link": "https://www.theguardian.com/us-news/2025/oct/25/klamath-river-restoration-teenagers",
+        "published": "2025-10-25",
+        "source": "https://www.theguardian.com"
+      },
+      {
+        "title": "The luxury effect: why you’ll find more wildlife in wealthy areas – and what it means for your health",
+        "link": "https://www.theguardian.com/environment/2025/oct/30/rich-lizards-luxury-effect-more-plants-wildlife-wealthier-suburbs-health-aoe",
         "published": "2025-10-30",
         "source": "https://www.theguardian.com"
       },
       {
-        "title": "Despite what a thinktank bleats to the Coalition, heat deaths are in fact ‘a thing’ | Temperature Check",
-        "link": "https://www.theguardian.com/environment/2025/oct/31/climate-risk-heat-deaths-fact-despite-coalition-thinktank",
-        "published": "2025-10-30",
+        "title": "Antarctic krill: how did a paperclip-sized crustacean cause a diplomatic row – and why are they so important?",
+        "link": "https://www.theguardian.com/environment/2025/oct/26/explainer-antarctic-krill-vital-ecosystem-food-chain-conservation-carbon-store",
+        "published": "2025-10-26",
         "source": "https://www.theguardian.com"
       },
       {
@@ -131,9 +114,9 @@
         "source": "https://www.theguardian.com"
       },
       {
-        "title": "Biodiversity is in catastrophic decline. Here are three ways to ensure Australia’s conservation law actually works | Atticus Fleming and Andrew Macintosh",
-        "link": "https://www.theguardian.com/commentisfree/2025/oct/28/australia-conservation-law-biodiversity-decline",
-        "published": "2025-10-28",
+        "title": "When the rains don’t come: how drought and endless dry seasons are changing life in Puntland – in pictures",
+        "link": "https://www.theguardian.com/global-development/gallery/2025/oct/30/when-the-rains-dont-come-how-drought-and-endless-dry-seasons-are-changing-life-in-puntland-in-pictures",
+        "published": "2025-10-30",
         "source": "https://www.theguardian.com"
       },
       {
@@ -146,34 +129,6 @@
   },
   {
     "cluster_id": 2,
-    "summary": "Delegates will be treated to flavours such as maniçoba, açaí and pirarucu . Indigenous chef and activist Tainá Marajoara will serve dishes rooted in ancestral Amazonian traditions . The chef is the founder of Ponto de Cultura Alimentar Iacitatá, the cultural and culinary collective selected to oversee COP30 .",
-    "sources": [
-      "UN News - Global perspective Human stories",
-      "https://www.theguardian.com"
-    ],
-    "articles": [
-      {
-        "title": "High stakes and high flavour: Indigenous chef brings Amazonian soul to COP30",
-        "link": "https://news.un.org/feed/view/en/story/2025/10/1166173",
-        "published": "2025-10-26",
-        "source": "UN News - Global perspective Human stories"
-      },
-      {
-        "title": "Toxin levels in fish lead to calls for UK-wide ban on mercury dental fillings",
-        "link": "https://www.theguardian.com/environment/2025/oct/30/toxin-levels-in-fish-lead-to-calls-for-uk-wide-ban-on-mercury-dental-fillings",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Antarctic krill: how did a paperclip-sized crustacean cause a diplomatic row – and why are they so important?",
-        "link": "https://www.theguardian.com/environment/2025/oct/26/explainer-antarctic-krill-vital-ecosystem-food-chain-conservation-carbon-store",
-        "published": "2025-10-26",
-        "source": "https://www.theguardian.com"
-      }
-    ]
-  },
-  {
-    "cluster_id": 3,
     "summary": "⚠️ Summary failed: index out of range in self",
     "sources": [
       "https://www.theguardian.com",
@@ -184,18 +139,6 @@
         "title": "All operational US liquefied natural gas terminals have violated pollution limits, says report",
         "link": "https://www.theguardian.com/us-news/2025/oct/29/liquefied-natural-gas-terminal-pollution-limits",
         "published": "2025-10-29",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "‘Trump doesn’t represent us’: US activist groups to push for climate action at Cop30 in Brazil",
-        "link": "https://www.theguardian.com/environment/2025/oct/28/cop30-us-climate-trump",
-        "published": "2025-10-28",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Russia arrests Ukrainian biologist for backing curbs on Antarctic krill fishing",
-        "link": "https://www.theguardian.com/environment/2025/oct/26/russia-ukrainian-biologist-leonid-pshenichnov-arrest-treason-antarctic-krill-overfishing",
-        "published": "2025-10-26",
         "source": "https://www.theguardian.com"
       },
       {
@@ -217,14 +160,14 @@
         "source": "https://www.cnbc.com"
       },
       {
-        "title": "Mining execs embrace 'phenomenal' rare earths interest from the Middle East",
-        "link": "https://www.cnbc.com/2025/10/28/rare-earths-mining-firms-embrace-bumper-interest-from-the-middle-east.html",
-        "published": "2025-10-28",
+        "title": "Oil giant Shell launches another $3.5 billion share buyback as profit beats expectations",
+        "link": "https://www.cnbc.com/2025/10/30/shell-earnings-q3-2025.html",
+        "published": "2025-10-30",
         "source": "https://www.cnbc.com"
       },
       {
-        "title": "Google and NextEra to revive major Iowa nuclear facility as AI energy demand surges",
-        "link": "https://www.cnbc.com/2025/10/28/google-nextera-iowa-duane-arnold-nuclear-power-plant-ai-energy-demand-data-centers.html",
+        "title": "Mining execs embrace 'phenomenal' rare earths interest from the Middle East",
+        "link": "https://www.cnbc.com/2025/10/28/rare-earths-mining-firms-embrace-bumper-interest-from-the-middle-east.html",
         "published": "2025-10-28",
         "source": "https://www.cnbc.com"
       },
@@ -233,6 +176,75 @@
         "link": "https://www.cnbc.com/2025/10/27/trump-xi-meeting-rare-earth-stocks-in-focus-amid-us-china-trade-talks.html",
         "published": "2025-10-27",
         "source": "https://www.cnbc.com"
+      },
+      {
+        "title": "What a cut in Reliance's Russian crude purchases would mean for India",
+        "link": "https://www.cnbc.com/2025/10/24/what-a-cut-in-reliances-russian-crude-purchases-would-mean-for-india.html",
+        "published": "2025-10-27",
+        "source": "https://www.cnbc.com"
+      }
+    ]
+  },
+  {
+    "cluster_id": 3,
+    "summary": "⚠️ Summary failed: index out of range in self",
+    "sources": [
+      "https://www.theguardian.com"
+    ],
+    "articles": [
+      {
+        "title": "US climate activists condemn 18-month jail term for nonviolent art museum protester",
+        "link": "https://www.theguardian.com/us-news/2025/oct/30/climate-activist-art-protest-jail-term",
+        "published": "2025-10-30",
+        "source": "https://www.theguardian.com"
+      },
+      {
+        "title": "Paint me cool: scientists reveal roof coating that can reduce surface temperatures up to 6C on hot days",
+        "link": "https://www.theguardian.com/environment/2025/oct/31/scientists-invent-roof-coating-reduce-indoor-temperatures-hot-days",
+        "published": "2025-10-30",
+        "source": "https://www.theguardian.com"
+      },
+      {
+        "title": "Ken Henry warns ‘conga line of developers’ would try to exploit exemptions in Labor’s proposed nature laws",
+        "link": "https://www.theguardian.com/australia-news/2025/oct/30/ken-henry-warns-labors-nature-laws-are-worthless-unless-minister-tightens-national-interest-exemptions",
+        "published": "2025-10-30",
+        "source": "https://www.theguardian.com"
+      },
+      {
+        "title": "Toxin levels in fish lead to calls for UK-wide ban on mercury dental fillings",
+        "link": "https://www.theguardian.com/environment/2025/oct/30/toxin-levels-in-fish-lead-to-calls-for-uk-wide-ban-on-mercury-dental-fillings",
+        "published": "2025-10-30",
+        "source": "https://www.theguardian.com"
+      },
+      {
+        "title": "Insurers calling for trees to be felled as cheap fix for subsidence, say critics",
+        "link": "https://www.theguardian.com/environment/2025/oct/30/insurers-calling-for-trees-to-be-felled-as-cheap-fix-for-subsidence-say-critics",
+        "published": "2025-10-30",
+        "source": "https://www.theguardian.com"
+      },
+      {
+        "title": "Russia arrests Ukrainian biologist for backing curbs on Antarctic krill fishing",
+        "link": "https://www.theguardian.com/environment/2025/oct/26/russia-ukrainian-biologist-leonid-pshenichnov-arrest-treason-antarctic-krill-overfishing",
+        "published": "2025-10-26",
+        "source": "https://www.theguardian.com"
+      },
+      {
+        "title": "Despite what a thinktank bleats to the Coalition, heat deaths are in fact ‘a thing’ | Temperature Check",
+        "link": "https://www.theguardian.com/environment/2025/oct/31/climate-risk-heat-deaths-fact-despite-coalition-thinktank",
+        "published": "2025-10-30",
+        "source": "https://www.theguardian.com"
+      },
+      {
+        "title": "Biodiversity is in catastrophic decline. Here are three ways to ensure Australia’s conservation law actually works | Atticus Fleming and Andrew Macintosh",
+        "link": "https://www.theguardian.com/commentisfree/2025/oct/28/australia-conservation-law-biodiversity-decline",
+        "published": "2025-10-28",
+        "source": "https://www.theguardian.com"
+      },
+      {
+        "title": "Week in wildlife: a ferocious wildcat, a cheeky seal and a disgruntled lioness",
+        "link": "https://www.theguardian.com/environment/gallery/2025/oct/24/week-in-wildlife-a-ferocious-wildcat-a-cheeky-seal-and-a-disgruntled-lioness",
+        "published": "2025-10-24",
+        "source": "https://www.theguardian.com"
       }
     ]
   },
@@ -240,25 +252,18 @@
     "cluster_id": 4,
     "summary": "⚠️ Summary failed: index out of range in self",
     "sources": [
-      "https://www.theguardian.com",
       "https://www.cnbc.com"
     ],
     "articles": [
       {
-        "title": "Shell’s profits pass $43bn after production hits new highs in Brazil and Gulf of Mexico",
-        "link": "https://www.theguardian.com/business/2025/oct/30/shells-profits-surpass-43bn-after-production-hits-new-highs-in-brazil-and-gulf-of-mexico",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Oil giant Shell launches another $3.5 billion share buyback as profit beats expectations",
-        "link": "https://www.cnbc.com/2025/10/30/shell-earnings-q3-2025.html",
-        "published": "2025-10-30",
+        "title": "Why bitcoin miner CleanSpark beat Microsoft for Wyoming AI data center deal, and what it means for crypto mining's future",
+        "link": "https://www.cnbc.com/2025/10/28/bitcoin-miner-cleanspark-crypto-mining-energy-power-ai-data-center.html",
+        "published": "2025-10-28",
         "source": "https://www.cnbc.com"
       },
       {
-        "title": "Why bitcoin miner CleanSpark beat Microsoft for Wyoming AI data center deal, and what it means for crypto mining's future",
-        "link": "https://www.cnbc.com/2025/10/28/bitcoin-miner-cleanspark-crypto-mining-energy-power-ai-data-center.html",
+        "title": "Google and NextEra to revive major Iowa nuclear facility as AI energy demand surges",
+        "link": "https://www.cnbc.com/2025/10/28/google-nextera-iowa-duane-arnold-nuclear-power-plant-ai-energy-demand-data-centers.html",
         "published": "2025-10-28",
         "source": "https://www.cnbc.com"
       },
@@ -271,12 +276,6 @@
       {
         "title": "Saudi Arabia poised to become AI data center hub, says Groq CEO",
         "link": "https://www.cnbc.com/2025/10/27/saudi-arabia-poised-to-become-ai-data-center-hub-groq-ceo-at-fii.html",
-        "published": "2025-10-27",
-        "source": "https://www.cnbc.com"
-      },
-      {
-        "title": "What a cut in Reliance's Russian crude purchases would mean for India",
-        "link": "https://www.cnbc.com/2025/10/24/what-a-cut-in-reliances-russian-crude-purchases-would-mean-for-india.html",
         "published": "2025-10-27",
         "source": "https://www.cnbc.com"
       },

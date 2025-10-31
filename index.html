@@ -129,14 +129,14 @@
                         const card = document.createElement('div');
                         card.className = `card cluster-${(index % 5) + 1}`;
 
-                        // Image placeholder - ISSUE 1: Hardcoded src
+                        // Image placeholder - CORRECTED: Use image_url from data, with fallback
                         const imageUrl = cluster.image_url || 'https://via.placeholder.com/400x180/2a7f62/ffffff?text=No+Image+Available'; // Fallback to a placeholder
                         card.innerHTML += `<img src="${imageUrl}" alt="Cluster Image">`;
 
-                        const content = document.createElement('div');
+                        const content = document.createElement('div' );
                         content.className = 'card-content';
 
-                        // Summary is now correctly handled by the Python script to ensure it's a string
+                        // Summary - CORRECTED: Use summary directly as Python script ensures it's a string
                         content.innerHTML += `<h3>${cluster.summary}</h3>`;
 
                         // Source link
@@ -146,8 +146,8 @@
                         const ul = document.createElement('ul');
                         cluster.articles.forEach(article => {
                             const li = document.createElement('li');
-                            // Article link is created correctly
-                            li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a> <span class="date">(${article.date})</span>`; // Added target="_blank" for better UX
+                            // Article link - CORRECTED: Added target="_blank" for better UX
+                            li.innerHTML = `<a href="${article.url}" target="_blank">${article.title}</a> <span class="date">(${article.date})</span>`;
                             ul.appendChild(li);
                         });
                         content.appendChild(ul);

@@ -6,5 +6,4 @@ sentence-transformers
 transformers
 tqdm
 torch
-lxml[html_clean]   # required for newspaper3k parsing
-nltk                # ensures punkt tokenizer is available
+lxml_html_clean

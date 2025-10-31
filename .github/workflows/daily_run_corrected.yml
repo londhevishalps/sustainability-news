@@ -40,7 +40,7 @@ jobs:
 
       - name: Run the sustainability update script
         run: |
-          python sustainability_updates.py
+          python sustainability_updates_improved.py
         continue-on-error: false
 
       - name: Commit & push updated outputs

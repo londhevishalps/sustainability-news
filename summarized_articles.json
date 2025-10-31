@@ -1,292 +1,280 @@
 [
   {
-    "cluster_id": 0,
-    "summary": "⚠️ Summary failed: index out of range in self",
-    "sources": [
-      "https://www.theguardian.com",
-      "https://www.cnbc.com"
-    ],
     "articles": [
-      {
-        "title": "All operational US liquefied natural gas terminals have violated pollution limits, says report",
-        "link": "https://www.theguardian.com/us-news/2025/oct/29/liquefied-natural-gas-terminal-pollution-limits",
-        "published": "2025-10-29",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Delta and United call on Congress to immediately end government shutdown, pay air traffic controllers",
-        "link": "https://www.cnbc.com/2025/10/30/government-shutdown-delta-air-traffic-controllers.html",
-        "published": "2025-10-30",
-        "source": "https://www.cnbc.com"
-      },
-      {
-        "title": "The biggest takeaways from the Trump-Xi meeting — what the truce covers and what is still unclear",
-        "link": "https://www.cnbc.com/2025/10/30/trump-xi-south-korea-rare-earth-tariff-trade-war-nvidia.html",
-        "published": "2025-10-30",
-        "source": "https://www.cnbc.com"
-      },
-      {
-        "title": "Rare earths stocks rally as China delays export controls after Trump-Xi meeting",
-        "link": "https://www.cnbc.com/2025/10/30/rare-earths-stocks-china-delays-export-controls-after-trump-xi-summit.html",
-        "published": "2025-10-30",
-        "source": "https://www.cnbc.com"
-      },
-      {
-        "title": "Oil giant Shell launches another $3.5 billion share buyback as profit beats expectations",
-        "link": "https://www.cnbc.com/2025/10/30/shell-earnings-q3-2025.html",
-        "published": "2025-10-30",
-        "source": "https://www.cnbc.com"
-      },
-      {
-        "title": "Why bitcoin miner CleanSpark beat Microsoft for Wyoming AI data center deal, and what it means for crypto mining's future",
-        "link": "https://www.cnbc.com/2025/10/28/bitcoin-miner-cleanspark-crypto-mining-energy-power-ai-data-center.html",
-        "published": "2025-10-28",
-        "source": "https://www.cnbc.com"
-      },
-      {
-        "title": "Google and NextEra to revive major Iowa nuclear facility as AI energy demand surges",
-        "link": "https://www.cnbc.com/2025/10/28/google-nextera-iowa-duane-arnold-nuclear-power-plant-ai-energy-demand-data-centers.html",
-        "published": "2025-10-28",
-        "source": "https://www.cnbc.com"
-      },
-      {
-        "title": "Rare earth stocks extend losses as U.S. expects China to delay export controls",
-        "link": "https://www.cnbc.com/2025/10/27/trump-xi-meeting-rare-earth-stocks-in-focus-amid-us-china-trade-talks.html",
-        "published": "2025-10-27",
-        "source": "https://www.cnbc.com"
-      },
-      {
-        "title": "Google and Anthropic announce cloud deal worth tens of billions of dollars",
-        "link": "https://www.cnbc.com/2025/10/23/anthropic-google-cloud-deal-tpu.html",
-        "published": "2025-10-24",
-        "source": "https://www.cnbc.com"
-      }
-    ]
-  },
-  {
-    "cluster_id": 1,
-    "summary": "⚠️ Summary failed: index out of range in self",
-    "sources": [
-      "https://www.theguardian.com"
-    ],
-    "articles": [
-      {
-        "title": "US climate activists condemn 18-month jail term for nonviolent art museum protester",
-        "link": "https://www.theguardian.com/us-news/2025/oct/30/climate-activist-art-protest-jail-term",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Paint me cool: scientists reveal roof coating that can reduce surface temperatures up to 6C on hot days",
-        "link": "https://www.theguardian.com/environment/2025/oct/31/scientists-invent-roof-coating-reduce-indoor-temperatures-hot-days",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Ken Henry warns ‘conga line of developers’ would try to exploit exemptions in Labor’s proposed nature laws",
-        "link": "https://www.theguardian.com/australia-news/2025/oct/30/ken-henry-warns-labors-nature-laws-are-worthless-unless-minister-tightens-national-interest-exemptions",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Toxin levels in fish lead to calls for UK-wide ban on mercury dental fillings",
-        "link": "https://www.theguardian.com/environment/2025/oct/30/toxin-levels-in-fish-lead-to-calls-for-uk-wide-ban-on-mercury-dental-fillings",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
       {
         "title": "Insurers calling for trees to be felled as cheap fix for subsidence, say critics",
-        "link": "https://www.theguardian.com/environment/2025/oct/30/insurers-calling-for-trees-to-be-felled-as-cheap-fix-for-subsidence-say-critics",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Despite what a thinktank bleats to the Coalition, heat deaths are in fact ‘a thing’ | Temperature Check",
-        "link": "https://www.theguardian.com/environment/2025/oct/31/climate-risk-heat-deaths-fact-despite-coalition-thinktank",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Biodiversity is in catastrophic decline. Here are three ways to ensure Australia’s conservation law actually works | Atticus Fleming and Andrew Macintosh",
-        "link": "https://www.theguardian.com/commentisfree/2025/oct/28/australia-conservation-law-biodiversity-decline",
-        "published": "2025-10-28",
-        "source": "https://www.theguardian.com"
-      }
-    ]
-  },
-  {
-    "cluster_id": 2,
-    "summary": "⚠️ Summary failed: index out of range in self",
-    "sources": [
-      "UN News - Global perspective Human stories",
-      "https://www.theguardian.com",
-      "https://www.cnbc.com"
-    ],
-    "articles": [
-      {
-        "title": "High stakes and high flavour: Indigenous chef brings Amazonian soul to COP30",
-        "link": "https://news.un.org/feed/view/en/story/2025/10/1166173",
-        "published": "2025-10-26",
-        "source": "UN News - Global perspective Human stories"
-      },
-      {
-        "title": "Antarctic krill: how did a paperclip-sized crustacean cause a diplomatic row – and why are they so important?",
-        "link": "https://www.theguardian.com/environment/2025/oct/26/explainer-antarctic-krill-vital-ecosystem-food-chain-conservation-carbon-store",
-        "published": "2025-10-26",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Russia arrests Ukrainian biologist for backing curbs on Antarctic krill fishing",
-        "link": "https://www.theguardian.com/environment/2025/oct/26/russia-ukrainian-biologist-leonid-pshenichnov-arrest-treason-antarctic-krill-overfishing",
-        "published": "2025-10-26",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "What a cut in Reliance's Russian crude purchases would mean for India",
-        "link": "https://www.cnbc.com/2025/10/24/what-a-cut-in-reliances-russian-crude-purchases-would-mean-for-india.html",
-        "published": "2025-10-27",
-        "source": "https://www.cnbc.com"
-      }
-    ]
-  },
-  {
-    "cluster_id": 3,
-    "summary": "⚠️ Summary failed: index out of range in self",
-    "sources": [
-      "UN News - Global perspective Human stories",
-      "https://www.theguardian.com",
-      "https://www.cnbc.com"
-    ],
-    "articles": [
-      {
-        "title": "Hurricane Melissa: Devastation in Jamaica at levels ‘never been seen before’",
-        "link": "https://news.un.org/feed/view/en/story/2025/10/1166217",
-        "published": "2025-10-29",
-        "source": "UN News - Global perspective Human stories"
-      },
-      {
-        "title": "‘Yawning gap’ remains between climate adaptation funds and funding pledges",
-        "link": "https://news.un.org/feed/view/en/story/2025/10/1166212",
-        "published": "2025-10-29",
-        "source": "UN News - Global perspective Human stories"
-      },
-      {
-        "title": "World enters ‘new era’ of climate action – but progress must accelerate",
-        "link": "https://news.un.org/feed/view/en/story/2025/10/1166204",
-        "published": "2025-10-28",
-        "source": "UN News - Global perspective Human stories"
-      },
-      {
-        "title": "In Southeast Asia, Guterres presses the case for climate action",
-        "link": "https://news.un.org/feed/view/en/story/2025/10/1166188",
-        "published": "2025-10-27",
-        "source": "UN News - Global perspective Human stories"
-      },
-      {
-        "title": "Ex-EPA head urges US to resist Trump attacks on climate action: ‘We won’t become numb’",
-        "link": "https://www.theguardian.com/world/2025/oct/30/resist-trump-attacks-climate-action",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Bill Gates says climate crisis won’t cause ‘humanity’s demise’ in call to shift focus to ‘improving lives’",
-        "link": "https://www.theguardian.com/us-news/2025/oct/28/bill-gates-climate-crisis-pivot",
-        "published": "2025-10-28",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "‘Trump doesn’t represent us’: US activist groups to push for climate action at Cop30 in Brazil",
-        "link": "https://www.theguardian.com/environment/2025/oct/28/cop30-us-climate-trump",
-        "published": "2025-10-28",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Two crucial Florida coral species left ‘functionally extinct’ by ocean heatwave",
-        "link": "https://www.theguardian.com/environment/2025/oct/27/coral-florida-functionally-extinct-climate-crisis",
-        "published": "2025-10-27",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Is it possible to find a sensible centre on climate change? | Fiona Katauskas",
-        "link": "https://www.theguardian.com/commentisfree/picture/2025/oct/28/is-it-possible-to-find-a-sensible-centre-on-climate-change",
-        "published": "2025-10-28",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "UN chief António Guterres: 'We don't want to see the Amazon become a savannah' - video",
-        "link": "https://www.theguardian.com/world/video/2025/oct/28/un-chief-antonio-guterres-we-dont-want-to-see-the-amazon-become-a-savannah-video",
-        "published": "2025-10-28",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Mining execs embrace 'phenomenal' rare earths interest from the Middle East",
-        "link": "https://www.cnbc.com/2025/10/28/rare-earths-mining-firms-embrace-bumper-interest-from-the-middle-east.html",
-        "published": "2025-10-28",
-        "source": "https://www.cnbc.com"
-      },
-      {
-        "title": "How Saudi Arabia is diversifying away from oil — and betting big on AI",
-        "link": "https://www.cnbc.com/2025/10/28/how-saudi-arabia-is-diversifying-away-from-oil-and-betting-big-on-ai.html",
-        "published": "2025-10-28",
-        "source": "https://www.cnbc.com"
-      },
-      {
-        "title": "Saudi Arabia poised to become AI data center hub, says Groq CEO",
-        "link": "https://www.cnbc.com/2025/10/27/saudi-arabia-poised-to-become-ai-data-center-hub-groq-ceo-at-fii.html",
-        "published": "2025-10-27",
-        "source": "https://www.cnbc.com"
-      }
-    ]
-  },
-  {
-    "cluster_id": 4,
-    "summary": "⚠️ Summary failed: index out of range in self",
-    "sources": [
-      "https://www.theguardian.com"
-    ],
-    "articles": [
-      {
-        "title": "One year after a historic dam removal, teens inspire river restoration worldwide: ‘It turns out you can win’",
-        "link": "https://www.theguardian.com/us-news/2025/oct/25/klamath-river-restoration-teenagers",
-        "published": "2025-10-25",
-        "source": "https://www.theguardian.com"
+        "url": "https://www.theguardian.com/environment/2025/oct/30/insurers-calling-for-trees-to-be-felled-as-cheap-fix-for-subsidence-say-critics",
+        "date": "2025-10-30",
+        "source": "Environment | The Guardian",
+        "text": "<p>Campaigners say problem so common that some of the UK’s most irreplaceable ancient trees in danger of being lost</p><p>When Linda Taylor Cantrill finally found her dream family home in Exmouth, Devon, it wasn’t the location, the square footage or the local amenities that finally made up her mind – it was the 200-year-old oak tree in the garden.</p><p>“The way we felt about just standing in the shade of the tree was: ‘We need this house, because look how beautiful it is,’” she told the Guardian.</p> <a href=\"https://www.theguardian.com/environment/2025/oct/30/insurers-calling-for-trees-to-be-felled-as-cheap-fix-for-subsidence-say-critics\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 0
       },
       {
         "title": "The luxury effect: why you’ll find more wildlife in wealthy areas – and what it means for your health",
-        "link": "https://www.theguardian.com/environment/2025/oct/30/rich-lizards-luxury-effect-more-plants-wildlife-wealthier-suburbs-health-aoe",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "How a radical experiment to bring a forest into a preschool transformed children’s health",
-        "link": "https://www.theguardian.com/environment/2025/oct/29/soil-sandpit-children-dirty-biodiversity-finnish-nurseries-research-microbes-bacteria-aoe",
-        "published": "2025-10-29",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "How do you move a village? Residents of France’s last outpost in North America try to outrun the sea",
-        "link": "https://www.theguardian.com/environment/2025/oct/28/canada-st-pierre-miquelon-relocation-climate-crisis-rising-tides-france-hurricanes",
-        "published": "2025-10-28",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "The acquisitions of a fortunate life have accumulated over the years. All must be culled while I have the wherewithal | Paul Daley",
-        "link": "https://www.theguardian.com/environment/commentisfree/2025/oct/27/amassed-belongings-overflowing-time-cull-tidy",
-        "published": "2025-10-27",
-        "source": "https://www.theguardian.com"
-      },
-      {
-        "title": "Vietnam floods: streets of Hoi An submerged like canals of Venice – in pictures",
-        "link": "https://www.theguardian.com/world/gallery/2025/oct/31/vietnam-floods-hoi-an-tourist-spots-submerged-pictures",
-        "published": "2025-10-31",
-        "source": "https://www.theguardian.com"
+        "url": "https://www.theguardian.com/environment/2025/oct/30/rich-lizards-luxury-effect-more-plants-wildlife-wealthier-suburbs-health-aoe",
+        "date": "2025-10-30",
+        "source": "Environment | The Guardian",
+        "text": "<p>The discovery that affluent neighbourhoods have more diversity of nature has implications for human wellbeing – and sheds light on the structural injustices in cities</p><p>For a long time, ecology tended to ignore people. It mostly focused on beautiful places far from large-scale human development: deep rainforest or pristine grassland. Then, in the late 1990s, in the desert city of Phoenix, Arizona, scientists shifted their gaze closer to home.</p><p>A team of ecologists went out into their own neighbourhood to map the distribution of urban plants in one of the first studies of its kind. Equipped with tape measures and clipboards, they documented trees and shrubs, sometimes getting on all fours to crawl through bushes under the curious watch of local people.</p> <a href=\"https://www.theguardian.com/environment/2025/oct/30/rich-lizards-luxury-effect-more-plants-wildlife-wealthier-suburbs-health-aoe\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 0
       },
       {
         "title": "When the rains don’t come: how drought and endless dry seasons are changing life in Puntland – in pictures",
-        "link": "https://www.theguardian.com/global-development/gallery/2025/oct/30/when-the-rains-dont-come-how-drought-and-endless-dry-seasons-are-changing-life-in-puntland-in-pictures",
-        "published": "2025-10-30",
-        "source": "https://www.theguardian.com"
+        "url": "https://www.theguardian.com/global-development/gallery/2025/oct/30/when-the-rains-dont-come-how-drought-and-endless-dry-seasons-are-changing-life-in-puntland-in-pictures",
+        "date": "2025-10-30",
+        "source": "Environment | The Guardian",
+        "text": "<p>October rains have been light across Somalia, a country which in recent years has found itself on the frontline of the climate crisis. The latest estimate is that 3.4 million people don’t have enough food. <a href=\"https://reliefweb.int/report/somalia/somalia-drought-conditions-central-and-northern-regions-flash-update-no1-5-august-2025\">One of the worst affected areas is Puntland</a>, where disappearing water sources, pasture and food supplies have forced many to abandon their way of life</p><p></p> <a href=\"https://www.theguardian.com/global-development/gallery/2025/oct/30/when-the-rains-dont-come-how-drought-and-endless-dry-seasons-are-changing-life-in-puntland-in-pictures\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 0
+      },
+      {
+        "title": "How a radical experiment to bring a forest into a preschool transformed children’s health",
+        "url": "https://www.theguardian.com/environment/2025/oct/29/soil-sandpit-children-dirty-biodiversity-finnish-nurseries-research-microbes-bacteria-aoe",
+        "date": "2025-10-29",
+        "source": "Environment | The Guardian",
+        "text": "<p>In Finland, kindergartens are exposing children to more mud, wild plants and moss - and finding changes to their health that show how crucial biodiversity is to wellbeing</p><p>Aurora Nikula, 5, is having a normal day at her nursery. She is making a cake out of sand and mud, adding in make-believe carrots, potatoes and meat. “It’s overcooked,” she says as she splashes water in, then adds another dollop of sand. “More sugar, it tastes better,” she says. A handful of mud goes in, and the dish evolves into a chocolate cake.</p><p>Aki Sinkkonen, a principal scientist with the Natural Resources Institute Finland, is watching. He’s also very interested in Aurora’s cake, but for different reasons. “Perfect,” he says, admiring the way she is mixing soil, sand and leaves and then putting it on her face. “She’s really getting her hands in it.”</p><p>Aki Sinkkonen (left) and Marja Roslund from the Natural Resources Institute Finland in the Humpula garden</p> <a href=\"https://www.theguardian.com/environment/2025/oct/29/soil-sandpit-children-dirty-biodiversity-finnish-nurseries-research-microbes-bacteria-aoe\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 0
+      },
+      {
+        "title": "Mining execs embrace 'phenomenal' rare earths interest from the Middle East",
+        "url": "https://www.cnbc.com/2025/10/28/rare-earths-mining-firms-embrace-bumper-interest-from-the-middle-east.html",
+        "date": "2025-10-28",
+        "source": "Energy",
+        "text": "Mining executives have welcomed a sharp upswing in investor interest from the Middle East, as Gulf states seek to expand their critical mineral ambitions and take on established global players.\n\nCritical minerals refer to a subset of materials considered essential to the energy transition. These resources, which tend to have a high risk of supply chain disruption, include metals such as copper, lithium, nickel, cobalt and rare earth elements.\n\n\"The interest in rare earths in this part of the world is phenomenal,\" Tony Sage, CEO of U.S.-listed rare earths miner Critical Metals, said during a business trip through the Middle East.\n\n\"I didn't expect it because, you know, they can't mine it. There [are] really no discoveries in this area, but they want to be able to participate somehow in the downstream,\" Sage told CNBC by telephone.\n\nHis comments come as policymakers and business leaders flock to Saudi Arabia's Future Investment Initiative (FII) in Riyadh, an event nicknamed as the \"Davos in the Desert.\"\n\nThe annual event, which got underway on Monday, is being held under the theme: \"The Key to Prosperity: Unlocking New Frontiers of Growth.\" It is expected this year's FII will lean into areas such as artificial intelligence, particularly as the oil-rich kingdom continues with its mission to diversify its economy.",
+        "image_url": null,
+        "cluster_id": 0
+      },
+      {
+        "title": "The acquisitions of a fortunate life have accumulated over the years. All must be culled while I have the wherewithal | Paul Daley",
+        "url": "https://www.theguardian.com/environment/commentisfree/2025/oct/27/amassed-belongings-overflowing-time-cull-tidy",
+        "date": "2025-10-27",
+        "source": "Environment | The Guardian",
+        "text": "<p>Do I really need to replace my telephone every two years? Could my next laptop be recycled rather than brand new?</p><p>I have an urgent desire to shed myself of goods and chattels.</p><p>The acquisitions of a fortunate life have accumulated like an overflowing email inbox and simply must be dealt with while I am alive, and not left to my children to wrangle when they’ll (hopefully, long down the track) be grieving.</p> <a href=\"https://www.theguardian.com/environment/commentisfree/2025/oct/27/amassed-belongings-overflowing-time-cull-tidy\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 0
+      },
+      {
+        "title": "One year after a historic dam removal, teens inspire river restoration worldwide: ‘It turns out you can win’",
+        "url": "https://www.theguardian.com/us-news/2025/oct/25/klamath-river-restoration-teenagers",
+        "date": "2025-10-25",
+        "source": "Environment | The Guardian",
+        "text": "<p>The Klamath River began rebounding almost immediately. Now, Indigenous youth are leading the next chapter of the recovery, inspiring tribes from Brazil to China</p><p>Ruby Williams’s pink kayak pierced the fog shrouding the mouth of the Klamath River, and she paddled harder. She was flanked on both sides by fellow Indigenous youth from across the basin, and their line of brightly colored boats would make history when they reached the Pacific Ocean on the other side of the sandy dunes – they were going to do it together.</p><p>The final of four hydroelectric dams was removed last year from the Klamath River, in the <a href=\"https://www.theguardian.com/us-news/2025/jan/03/california-klamath-dam-removal\">largest project of its kind in US history</a>. The following July, 28 teenage tribal representatives completed a 30-day journey that spanned roughly 310 miles (500km) from the headwaters in the Cascades to the Pacific. They were the very first to kayak the entirety of the mighty river in more than a century.</p> <a href=\"https://www.theguardian.com/us-news/2025/oct/25/klamath-river-restoration-teenagers\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 0
       }
-    ]
+    ],
+    "source_link": "Environment | The Guardian",
+    "summary": "Campaigners say problem so common that some of UK’s most irreplaceable ancient trees in danger of being lost. The discovery that affluent neighbourhoods have more diversity of nature has implications for human wellbeing – and sheds light on the structural injustices in cities.",
+    "image_url": null
+  },
+  {
+    "articles": [
+      {
+        "title": "US climate activists condemn 18-month jail term for nonviolent art museum protester",
+        "url": "https://www.theguardian.com/us-news/2025/oct/30/climate-activist-art-protest-jail-term",
+        "date": "2025-10-30",
+        "source": "Environment | The Guardian",
+        "text": "<p>‘It’s hard to fathom how a peaceful protester can receive more prison time than many of the insurrectionists,’ said one researcher, of Timothy Martin’s sentence</p><p>Climate activists have condemned an 18-month jail term for a nonviolent protester who vandalized a display case at the National Gallery of Art as “grossly disproportionate” and a violation of the constitutional protected rights to free speech and peaceful protest.</p><p>Timothy Martin, along with fellow activist Joanna Smith, staged the <a href=\"https://www.youtube.com/watch?v=uzmDLDzuJpA\">climate protest</a> at the Washington DC gallery in April 2023, smearing washable red and black paint on the protective glass covering Edgar Degas’s Little Dancer Aged Fourteen Years sculpture.</p> <a href=\"https://www.theguardian.com/us-news/2025/oct/30/climate-activist-art-protest-jail-term\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "Ex-EPA head urges US to resist Trump attacks on climate action: ‘We won’t become numb’",
+        "url": "https://www.theguardian.com/world/2025/oct/30/resist-trump-attacks-climate-action",
+        "date": "2025-10-30",
+        "source": "Environment | The Guardian",
+        "text": "<p>Expanded climate action from cities and states could slash planet-heating pollution despite Trump working against it</p><p>Ahead of next month’s major <a href=\"https://www.theguardian.com/world/unitednations\">United Nations</a> climate talks in Brazil, Gina McCarthy, the former Environmental Protection Agency head, said US cities and states were keeping the climate fight alive despite an all-out assault from the <a href=\"https://www.theguardian.com/us-news/trump-administration\">Trump administration</a>.</p><p>“We will not allow our country to become numb or debilitated by those who are standing in the way of progress,” she said on a press call early on Thursday.</p> <a href=\"https://www.theguardian.com/world/2025/oct/30/resist-trump-attacks-climate-action\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "Paint me cool: scientists reveal roof coating that can reduce surface temperatures up to 6C on hot days",
+        "url": "https://www.theguardian.com/environment/2025/oct/31/scientists-invent-roof-coating-reduce-indoor-temperatures-hot-days",
+        "date": "2025-10-30",
+        "source": "Environment | The Guardian",
+        "text": "<p>Sydney researchers commercialising a product they say can cool indoor spaces and will cost little more than standard premium paints</p><ul><li><p><a href=\"https://www.theguardian.com/environment/2025/mar/10/sign-up-for-the-clear-air-australia-environment-newsletter-with-adam-morton?CMP=cvau_sfl\">Sign up for climate and environment editor Adam Morton’s free Clear Air newsletter here</a></p></li></ul><p>Australian scientists have developed roof coatings that can passively cool surfaces up to 6C below ambient temperature, as well as extract water from the atmosphere, which they say could reduce indoor temperatures during extreme heat events.</p><p>Heatwaves are becoming more intense, <a href=\"https://www.theguardian.com/news/2025/sep/25/australias-horrifying-climate-future-in-four-charts-and-how-we-can-avoid-the-worst\">more frequent</a> and <a href=\"https://www.theguardian.com/australia-news/2025/sep/17/heatwaves-caused-more-than-1000-deaths-in-australia-over-four-year-period-study-finds\">more deadly</a> due to human-caused global heating.</p> <a href=\"https://www.theguardian.com/environment/2025/oct/31/scientists-invent-roof-coating-reduce-indoor-temperatures-hot-days\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "Ken Henry warns ‘conga line of developers’ would try to exploit exemptions in Labor’s proposed nature laws",
+        "url": "https://www.theguardian.com/australia-news/2025/oct/30/ken-henry-warns-labors-nature-laws-are-worthless-unless-minister-tightens-national-interest-exemptions",
+        "date": "2025-10-30",
+        "source": "Environment | The Guardian",
+        "text": "<p><strong>Exclusive: </strong>‘Every project developer is absolutely convinced that their project is in the national interest,’ Australian Climate and Biodiversity Foundation boss says</p><ul><li><p><a href=\"https://www.theguardian.com/australia-news/live/2025/oct/31/australia-news-live-politics-parliament-coalition-labor-net-zero-anthony-albanese-sussan-ley-epbc-nature-laws-ntwnfb\">Follow our Australia news live blog for latest updates</a></p></li><li><p>Get our <a href=\"https://www.theguardian.com/email-newsletters?CMP=cvau_sfl\">breaking news email</a>, <a href=\"https://app.adjust.com/w4u7jx3\">free app</a> or <a href=\"https://www.theguardian.com/australia-news/series/full-story?CMP=cvau_sfl\">daily news podcast</a></p></li></ul><p>The former Treasury secretary Ken Henry says “a conga line of developers” would lobby the environment minister for special carve-outs unless the Albanese government clarifies the types of projects that could be granted exemptions under its <a href=\"https://www.theguardian.com/australia-news/2025/oct/27/coalition-greens-scolded-opposing-new-nature-laws-environment\">new nature laws</a>.</p><p>While welcoming the overall package of laws introduced to parliament on Thursday, <a href=\"https://www.theguardian.com/australia-news/2025/jul/16/fixing-australias-broken-environment-laws-hold-key-to-productivity-ex-treasury-head-says\">Henry</a> said the vague drafting of the “national interest” exemption and the failure to close loopholes for native forest logging and land clearing were problems that needed to be fixed.</p> <a href=\"https://www.theguardian.com/australia-news/2025/oct/30/ken-henry-warns-labors-nature-laws-are-worthless-unless-minister-tightens-national-interest-exemptions\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "Despite what a thinktank bleats to the Coalition, heat deaths are in fact ‘a thing’ | Temperature Check",
+        "url": "https://www.theguardian.com/environment/2025/oct/31/climate-risk-heat-deaths-fact-despite-coalition-thinktank",
+        "date": "2025-10-30",
+        "source": "Environment | The Guardian",
+        "text": "<p>Centre for Independent Studies points to climate risk report to back up its dismissal of heat-related deaths, but neglects to use the part that actually concerns the future</p><ul><li><p><a href=\"https://www.theguardian.com/environment/2025/mar/10/sign-up-for-the-clear-air-australia-environment-newsletter-with-adam-morton?CMP=cvau_sfl\">Sign up for climate and environment editor Adam Morton’s free Clear Air newsletter here</a></p></li><li><p><a href=\"https://www.theguardian.com/australia-news/live/2025/oct/31/australia-news-live-politics-parliament-coalition-labor-net-zero-anthony-albanese-sussan-ley-epbc-nature-laws-ntwnfb\">Follow our Australia news live blog for latest updates</a></p></li></ul><p>When is a thing that is definitely a thing, not a thing? When you’re a thinktank trying to convince Coalition MPs they shouldn’t be backing policies to help Australia reach net zero greenhouse gas emissions.</p><p>As <a href=\"https://www.theguardian.com/australia-news/2025/oct/29/coalition-mps-net-zero-doubts-climate-science\">reported by Guardian Australia</a>, the Centre for Independent Studies (CIS) gave a presentation to Coalition MPs in Canberra this week, telling them “heat deaths aren’t a thing” as part of a briefing to convince them to go cold on policies to get greenhouse gas emissions to net zero.</p> <a href=\"https://www.theguardian.com/environment/2025/oct/31/climate-risk-heat-deaths-fact-despite-coalition-thinktank\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "‘Yawning gap’ remains between climate adaptation funds and funding pledges",
+        "url": "https://news.un.org/feed/view/en/story/2025/10/1166212",
+        "date": "2025-10-29",
+        "source": "UN News - Global perspective Human stories",
+        "text": "Developing countries are receiving less than 10 per cent of the money they need to adapt to a world increasingly vulnerable to extreme weather – putting lives, livelihoods and entire economies at risk, the UN revealed on Wednesday.",
+        "image_url": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/30-01-2025-UNICEF-Indonesia-01.jpg/image560x340cropped.jpg",
+        "cluster_id": 1
+      },
+      {
+        "title": "All operational US liquefied natural gas terminals have violated pollution limits, says report",
+        "url": "https://www.theguardian.com/us-news/2025/oct/29/liquefied-natural-gas-terminal-pollution-limits",
+        "date": "2025-10-29",
+        "source": "Environment | The Guardian",
+        "text": "<p>Analysis of public records comes as Trump administration aims to fast-track approval of new LNG export terminals</p><p>Every fully operational liquefied natural gas (LNG) terminal in the US has violated federal pollution limits in recent years, a new report has found.</p><p>The analysis of public records comes as the <a href=\"https://www.theguardian.com/us-news/trump-administration\">Trump administration</a> is aiming to fast-track the approval of new export terminals in an attempt to sell more domestic LNG to Europe and Asia. <a href=\"https://www.theguardian.com/us-news/joebiden\">Joe Biden</a> had previously placed a pause on LNG exports, which <a href=\"https://www.theguardian.com/us-news/donaldtrump\">Donald Trump</a> lifted on the first day of his return to office.</p> <a href=\"https://www.theguardian.com/us-news/2025/oct/29/liquefied-natural-gas-terminal-pollution-limits\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "World enters ‘new era’ of climate action – but progress must accelerate",
+        "url": "https://news.un.org/feed/view/en/story/2025/10/1166204",
+        "date": "2025-10-28",
+        "source": "UN News - Global perspective Human stories",
+        "text": "While urging countries to accelerate action, UN Climate Change Executive Secretary Simon Stiell struck an optimistic tone on Tuesday following the release of a new report on updated national climate commitments.",
+        "image_url": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/09-12-2020-Rouge-Electric-Vehicle-Center.jpg/image560x340cropped.jpg",
+        "cluster_id": 1
+      },
+      {
+        "title": "Bill Gates says climate crisis won’t cause ‘humanity’s demise’ in call to shift focus to ‘improving lives’",
+        "url": "https://www.theguardian.com/us-news/2025/oct/28/bill-gates-climate-crisis-pivot",
+        "date": "2025-10-28",
+        "source": "Environment | The Guardian",
+        "text": "<p>Billionaire’s statement comes a day after UN said humanity missed 1.5C climate target and warned of devastation</p><p>Bill Gates has called for a “strategic pivot” in the effort against the climate crisis, writing that the world should shift away from trying to limit rising temperatures to instead focusing on efforts to prevent disease and poverty.</p><p>Writing on his <a href=\"https://www.gatesnotes.com/home/home-page-topic/reader/three-tough-truths-about-climate\">Gates Notes website</a>, the billionaire Microsoft co-founder criticized what he described as a “doomsday view of climate change” which is focusing “too much on near-term emissions goals”.</p> <a href=\"https://www.theguardian.com/us-news/2025/oct/28/bill-gates-climate-crisis-pivot\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "‘Trump doesn’t represent us’: US activist groups to push for climate action at Cop30 in Brazil",
+        "url": "https://www.theguardian.com/environment/2025/oct/28/cop30-us-climate-trump",
+        "date": "2025-10-28",
+        "source": "Environment | The Guardian",
+        "text": "<p>US groups aim to represent country at UN climate summit even as Trump administration declines to send a delegation</p><p>Despite historic environmental rollbacks under a president who pulled the US from a key international climate treaty – and <a href=\"https://www.theguardian.com/commentisfree/2025/oct/13/donald-trump-withdrawal-paris-agreement-tackling-climate-crisis-easier\">recently called</a> global warming “the greatest con job ever perpetrated on the world” – US civil society groups say they are gearing up to push for bold international climate action at a major UN conference next month.</p><p>“This is a really important moment to illustrate that Trump does not represent the entirety, or even anywhere near a majority, of us,” said Collin Rees, US program manager at the environmental non-profit Oil Change International, who will attend the annual UN climate conference, known as Cop30<strong>.</strong></p> <a href=\"https://www.theguardian.com/environment/2025/oct/28/cop30-us-climate-trump\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "Is it possible to find a sensible centre on climate change? | Fiona Katauskas",
+        "url": "https://www.theguardian.com/commentisfree/picture/2025/oct/28/is-it-possible-to-find-a-sensible-centre-on-climate-change",
+        "date": "2025-10-28",
+        "source": "Environment | The Guardian",
+        "text": "<p>Murray Watt seems to think so</p><ul><li><p>See more of <a href=\"https://www.theguardian.com/profile/fiona-katauskas\">Fiona Katauskas’s cartoons here</a></p></li></ul> <a href=\"https://www.theguardian.com/commentisfree/picture/2025/oct/28/is-it-possible-to-find-a-sensible-centre-on-climate-change\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "Biodiversity is in catastrophic decline. Here are three ways to ensure Australia’s conservation law actually works | Atticus Fleming and Andrew Macintosh",
+        "url": "https://www.theguardian.com/commentisfree/2025/oct/28/australia-conservation-law-biodiversity-decline",
+        "date": "2025-10-28",
+        "source": "Environment | The Guardian",
+        "text": "<p>The highest priority must be to ensure land-clearing is properly regulated to save our native forests</p><ul><li><p><a href=\"https://www.theguardian.com/environment/2025/mar/10/sign-up-for-the-clear-air-australia-environment-newsletter-with-adam-morton?CMP=cvau_sfl\">Sign up for climate and environment editor Adam Morton’s free Clear Air newsletter here</a></p></li></ul><p>Australia’s parliament will soon consider <a href=\"https://www.theguardian.com/australia-news/2025/oct/26/minister-to-retain-final-say-on-controversial-projects-under-labors-long-awaited-nature-laws\">proposed reforms to federal environmental laws</a> – known as the Environment Protection and Biodiversity Conservation Act. Unfortunately, signals from the government suggest this may be another reform process that fails to deliver the progress we need – despite everyone agreeing that Australia’s biodiversity is in catastrophic decline.</p><p>When introduced, the EPBC Act was a historic reform by a conservative government. For the first time since federation, the Australian parliament exercised its full suite of constitutional powers to regulate environmentally harmful actions on all tenures.</p><p><strong><a href=\"https://www.theguardian.com/environment/2025/mar/10/sign-up-for-the-clear-air-australia-environment-newsletter-with-adam-morton?CMP=copyembed\">Sign up to get climate and environment editor Adam Morton’s Clear Air column as a free newsletter</a></strong></p> <a href=\"https://www.theguardian.com/commentisfree/2025/oct/28/australia-conservation-law-biodiversity-decline\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "UN chief António Guterres: 'We don't want to see the Amazon become a savannah' - video",
+        "url": "https://www.theguardian.com/world/video/2025/oct/28/un-chief-antonio-guterres-we-dont-want-to-see-the-amazon-become-a-savannah-video",
+        "date": "2025-10-28",
+        "source": "Environment | The Guardian",
+        "text": "<p>UN secretary general António Guterres speaks to the Guardian and Sumaúma about the 'failure' of the Cop process to limit global heating to 1.5C, that overshooting is now 'inevitable', and why defending the rights of indigenous communities should be a top priority for global leaders</p> <a href=\"https://www.theguardian.com/world/video/2025/oct/28/un-chief-antonio-guterres-we-dont-want-to-see-the-amazon-become-a-savannah-video\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      },
+      {
+        "title": "In Southeast Asia, Guterres presses the case for climate action",
+        "url": "https://news.un.org/feed/view/en/story/2025/10/1166188",
+        "date": "2025-10-27",
+        "source": "UN News - Global perspective Human stories",
+        "text": "Amid deepening global divides and economic uncertainty, the United Nations called for stronger multilateral cooperation and sweeping reforms to global financial and governance systems, emphasising the need for a “networked, multipolar world” where equity and inclusion guide decision-making.",
+        "image_url": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Production%20Library/27-10-2025-UNICEF-Lao_PDR.jpeg/image560x340cropped.jpg",
+        "cluster_id": 1
+      },
+      {
+        "title": "Two crucial Florida coral species left ‘functionally extinct’ by ocean heatwave",
+        "url": "https://www.theguardian.com/environment/2025/oct/27/coral-florida-functionally-extinct-climate-crisis",
+        "date": "2025-10-27",
+        "source": "Environment | The Guardian",
+        "text": "<p>Climate crisis drives near-total collapse of staghorn and elkhorn corals that formed backbone to state’s reefs</p><p>Two of the most important coral species that made up Florida’s reef are now functionally extinct after a withering ocean heatwave caused catastrophic losses, scientists have found.</p><p>The near-total collapse of the corals that once formed the backbone of reefs in Florida and the Caribbean means they can no longer play their previously crucial role in building and sustaining reef ecosystems that host a variety of marine life.</p> <a href=\"https://www.theguardian.com/environment/2025/oct/27/coral-florida-functionally-extinct-climate-crisis\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 1
+      }
+    ],
+    "source_link": "Environment | The Guardian",
+    "summary": "Timothy Martin, along with fellow activist Joanna Smith, staged the. climate protest at the Washington DC gallery in April 2023. They smeared washable red and black paint on the protective glass covering Edgar Degas’s Little Dancer Aged Fourteen Years sculpture. Australian scientists have developed roof coatings that can passively cool surfaces up to 6C below ambient temperature.",
+    "image_url": null
+  },
+  {
+    "articles": [
+      {
+        "title": "How do you move a village? Residents of France’s last outpost in North America try to outrun the sea",
+        "url": "https://www.theguardian.com/environment/2025/oct/28/canada-st-pierre-miquelon-relocation-climate-crisis-rising-tides-france-hurricanes",
+        "date": "2025-10-28",
+        "source": "Environment | The Guardian",
+        "text": "<p>As rising tides eat away at the Saint-Pierre and Miquelon archipelago off Canada, plans to move the historic village to higher ground have divided residents</p><p>Franck Detcheverry, Miquelon’s 41-year-old mayor, trudges up a grassy hill. “The view isn’t too bad, huh?” he jokes. The ocean sparkles 40 metres below the empty mound. The sound of a man playing the bagpipes, as if serenading the sea, floats up from the shoreline. This hill will be the location of his new home and those of all his fellow villagers.</p><p>In the distance, about half a mile away, you can see the outline of the 400 or so buildings in the village of Miquelon. It sits only 2 metres above sea level on the archipelago of Saint-Pierre and Miquelon. Situated off the Canadian coast to the south of Newfoundland, it is an “overseas collectivity” of France, and the country’s last foothold in North America.</p> <a href=\"https://www.theguardian.com/environment/2025/oct/28/canada-st-pierre-miquelon-relocation-climate-crisis-rising-tides-france-hurricanes\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 2
+      },
+      {
+        "title": "Antarctic krill: how did a paperclip-sized crustacean cause a diplomatic row – and why are they so important?",
+        "url": "https://www.theguardian.com/environment/2025/oct/26/explainer-antarctic-krill-vital-ecosystem-food-chain-conservation-carbon-store",
+        "date": "2025-10-26",
+        "source": "Environment | The Guardian",
+        "text": "<p>Russia’s <a href=\"https://www.theguardian.com/environment/2025/oct/26/russia-ukrainian-biologist-leonid-pshenichnov-arrest-treason-antarctic-krill-overfishing\">arrest of a Ukrainian scientist</a> this week over his support for curbs on krill fishing have thrown the vital role of the tiny marine species into the spotlight</p><p>Antarctic krill are small, shrimp-like marine crustaceans (<em>Euphausia superba</em><em>)</em>. They feed on plankton and are the main food source for larger marine animals. The word “krill” comes from the <a href=\"https://www.etymonline.com/search?q=krill\">Norwegian word “</a><em><a href=\"https://www.etymonline.com/search?q=krill\">kril</a></em><a href=\"https://www.etymonline.com/search?q=krill\">” meaning the small fry of fish</a>.</p> <a href=\"https://www.theguardian.com/environment/2025/oct/26/explainer-antarctic-krill-vital-ecosystem-food-chain-conservation-carbon-store\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 2
+      },
+      {
+        "title": "Russia arrests Ukrainian biologist for backing curbs on Antarctic krill fishing",
+        "url": "https://www.theguardian.com/environment/2025/oct/26/russia-ukrainian-biologist-leonid-pshenichnov-arrest-treason-antarctic-krill-overfishing",
+        "date": "2025-10-26",
+        "source": "Environment | The Guardian",
+        "text": "<p>‘Trumped-up’ charges spark diplomatic row as scientists express fears for health of 70-year-old Leonid Pshenichnov</p><ul><li><p><a href=\"https://www.theguardian.com/environment/2025/oct/26/explainer-antarctic-krill-vital-ecosystem-food-chain-conservation-carbon-store\">Antarctic krill: how did a paperclip-sized crustacean cause a diplomatic row – and why are they so important?</a></p></li></ul><p></p><p>A diplomatic row has erupted over the “illegal” detention of one of Ukraine’s scientists, who has been accused by the Kremlin of undermining Russia’s industrial trawling for krill in Antarctica.</p><p>Leonid Pshenichnov, 70, a Ukrainian biologist who is an expert on Antarctica, has a decades-long record of scientific research and contributions to conservation, including support for marine protected areas in the region.</p> <a href=\"https://www.theguardian.com/environment/2025/oct/26/russia-ukrainian-biologist-leonid-pshenichnov-arrest-treason-antarctic-krill-overfishing\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 2
+      }
+    ],
+    "source_link": "Environment | The Guardian",
+    "summary": "The village of Miquelon sits only 2 metres above sea level on the archipelago of Saint-Pierre and Miqualon. Situated off the Canadian coast to the south of Newfoundland, it is an “overseas collectivity” of France.",
+    "image_url": null
+  },
+  {
+    "articles": [
+      {
+        "title": "Oil giant Shell launches another $3.5 billion share buyback as profit beats expectations",
+        "url": "https://www.cnbc.com/2025/10/30/shell-earnings-q3-2025.html",
+        "date": "2025-10-30",
+        "source": "Energy",
+        "text": "The Shell gas station logo is displayed on February 13, 2025 in Austin, Texas.\n\nBritish oil major Shell on Thursday reported stronger-than-expected third-quarter profit, citing robust operational performance and higher trading contributions.\n\nShell posted adjusted earnings of $5.4 billion for the quarter, beating analyst expectations of $5.05 billion, according to an LSEG-compiled consensus. A separate, company-provided analyst forecast had put Shell's expected third-quarter profit at $5.09 billion.\n\nThe London-headquartered firm reported adjusted earnings of $6 billion over the same period last year and $4.26 billion for this year's April-June period.\n\n\"Shell delivered another strong set of results, with clear progress across our portfolio and excellent performance in our Marketing business and deepwater assets in the Gulf of America and Brazil,\" Shell CEO Wael Sawan said in a statement.\n\nThe company also announced another $3.5 billion in share buybacks over the next three months, maintaining the pace of its shareholder returns. The company said it marked the 16th consecutive quarter of at least $3 billion in buybacks.\n\nShell's net debt came in at $41.2 billion at the end of the third quarter, down from $43.2 billion on a quarterly basis.\n\nThe oil major's London-listed share price finished Thursday's session up 0.2%. The stock price is up more 16% year-to-date, outperforming its industry peers.\n\n\"Numbers are solid in virtually all divisions and shows earning growth and strong cash flow generation,\" said Maurizio Carulli, global energy and materials analyst at Quilter Cheviot.\n\n\"Of note the robust production in Brazil and the Gulf of Mexico. The LNG Canada ramp up, with an initial 13 cargos in Q3, benefited the results as well. The only weak part was Chemicals, but it is a small part of the business and Shell's management is trying to find a strategic solution for it,\" Carulli said.\n\nOther third-quarter highlights included:\n\nAdjusted earnings fell 9.9% compared to the same period last year.\n\nCash flow from operations (CFFO) came in at $12.2 billion for the third quarter, compared to $14.7 billion in the same period last year.\n\nCash capital expenditure for the quarter stood at $4.9 billion.\n\nShell's results come as French oil major TotalEnergies reported a slight drop in third-quarter profit as oil and gas production growth helped to offset lower crude prices.\n\nNorwegian energy firm Equinor , for its part, on Wednesday posted a steeper-than-expected drop in third-quarter profit, with adjusted operating income coming in at $6.21 billion for the July-September period.\n\nU.S. oil giants Exxon Mobil and Chevron are both scheduled to report third-quarter results on Friday, with Britain's BP set to follow suit on Tuesday.\n\nAnalysts expect Big Oil's shareholder payouts to come under pressure over the coming months, with energy majors looking to tighten their belts amid a weaker crude price environment.",
+        "image_url": null,
+        "cluster_id": 3
+      }
+    ],
+    "source_link": "Energy",
+    "summary": "Shell posted adjusted earnings of $5.4 billion for the quarter, beating analyst expectations. The company also announced another $3.5 billion in share buybacks. Shell's results come as French oil major TotalEnergies reported a slight drop in third-quarter profit.",
+    "image_url": null
+  },
+  {
+    "articles": [
+      {
+        "title": "Toxin levels in fish lead to calls for UK-wide ban on mercury dental fillings",
+        "url": "https://www.theguardian.com/environment/2025/oct/30/toxin-levels-in-fish-lead-to-calls-for-uk-wide-ban-on-mercury-dental-fillings",
+        "date": "2025-10-30",
+        "source": "Environment | The Guardian",
+        "text": "<p>Exclusive: More than 98% of fish and mussels tested in English waters contain mercury above EU safety limits</p><p>Britain is facing mounting pressure to ban mercury dental fillings, one of the few countries yet to prevent the practice, as new data reveals alarming contamination levels in the nation’s fish and shellfish.</p><p>Mercury is a potent neurotoxin that can harm the nervous, digestive and immune systems, as well as the lungs, kidneys, skin and eyes, even at low levels of exposure. Its organic form, methylmercury, is particularly dangerous to unborn babies and can move through the food chain building up in insects, fish and birds.</p> <a href=\"https://www.theguardian.com/environment/2025/oct/30/toxin-levels-in-fish-lead-to-calls-for-uk-wide-ban-on-mercury-dental-fillings\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 4
+      }
+    ],
+    "source_link": "Environment | The Guardian",
+    "summary": "More than 98% of fish and mussels tested in English waters contain mercury above EU safety limits. Mercury is a potent neurotoxin that can harm the nervous, digestive and immune systems.",
+    "image_url": null
   }
 ]

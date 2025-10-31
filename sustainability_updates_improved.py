@@ -2,20 +2,19 @@
 """
 sustainability_updates_improved.py
 
-Full pipeline:
-1) Fetch RSS -> raw_articles.json
-2) Extract full text -> filtered_articles.json
-3) Filter for sustainability (keywords + optional semantic similarity)
-4) Cluster -> clustered_articles.json
-5) Summarize clusters -> summarized_articles.json
+Flow:
+1) fetch RSS -> raw_articles.json
+2) extract full text -> filtered_articles.json
+3) filter for sustainability keywords & semantic relevance
+4) cluster -> clustered_articles.json
+5) summarize clusters -> summarized_articles.json
 
-Features:
-- Robust date parsing
-- Image extraction
-- Parallel text extraction
-- Keyword + semantic filtering
-- Clustering via SBERT
-- Summarization via transformers
+Improvements:
+- Robust date parsing for RSS feeds.
+- More robust image URL extraction.
+- Use of concurrent futures for parallel text extraction.
+- Centralized model loading to avoid re-initialization.
+- Safer semantic filtering to avoid zero articles.
 """
 
 import os
@@ -33,6 +32,7 @@ from tqdm import tqdm
 from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
 from transformers import pipeline
+import torch
 
 # #############################################################################
 # CONFIG
@@ -45,7 +45,11 @@ SUMMARIES_JSON = "summarized_articles.json"
 
 NUM_CLUSTERS = 5
 CUTOFF_DAYS = 7
-MAX_WORKERS = 8  # Parallel text extraction
+MAX_WORKERS = 8  # parallel text extraction
+SUSTAINABILITY_KEYWORDS = [
+    "sustainability", "climate", "carbon", "green", "energy", "environment",
+    "recycle", "emission", "pollution", "eco", "net-zero", "biodiversity"
+]
 
 RSS_FEEDS = [
     "https://news.un.org/feed/subscribe/en/news/topic/climate-change/feed/rss.xml",
@@ -54,18 +58,6 @@ RSS_FEEDS = [
     "https://www.cnbc.com/id/19836768/device/rss/rss.html",
     "https://www.euractiv.com/section/energy-environment/feed/"
 ]
-
-# Sustainability keywords
-SUSTAINABILITY_KEYWORDS = [
-    "sustainability", "climate", "renewable", "carbon", "emissions",
-    "green energy", "environment", "ecology", "net zero", "solar",
-    "wind energy", "biodiversity", "recycling", "waste", "conservation",
-    "water", "pollution", "deforestation", "electric vehicle", "clean tech"
-]
-
-# Optional semantic filtering reference
-REFERENCE_TEXT = "Articles about sustainability, climate change, renewable energy, conservation, and environmental protection."
-SEMANTIC_THRESHOLD = 0.5  # cosine similarity threshold
 
 # #############################################################################
 # UTILITIES
@@ -98,17 +90,14 @@ def parse_date(date_str: str) -> Optional[datetime]:
     return None
 
 def extract_image_url(entry) -> Optional[str]:
-    # media_content
     if hasattr(entry, 'media_content') and entry.media_content:
         for media in entry.media_content:
             if 'url' in media and media.get('type', '').startswith('image'):
                 return media['url']
-    # enclosure
     if hasattr(entry, 'enclosures') and entry.enclosures:
         for enc in entry.enclosures:
             if enc.get('type', '').startswith('image'):
                 return enc['href']
-    # summary/description
     for field in ['summary', 'description', 'content']:
         if hasattr(entry, field):
             content = getattr(entry, field)
@@ -119,13 +108,6 @@ def extract_image_url(entry) -> Optional[str]:
                 return match.group(1)
     return None
 
-def is_sustainability_article(article: Dict) -> bool:
-    combined_text = f"{article.get('title', '')} {article.get('text', '')}".lower()
-    for keyword in SUSTAINABILITY_KEYWORDS:
-        if keyword in combined_text:
-            return True
-    return False
-
 # #############################################################################
 # STEP 1: FETCH RSS
 # #############################################################################
@@ -133,17 +115,19 @@ def is_sustainability_article(article: Dict) -> bool:
 def fetch_rss(feeds: List[str]) -> List[Dict]:
     all_articles = []
     cutoff_date = datetime.now() - timedelta(days=CUTOFF_DAYS)
-
     for url in tqdm(feeds, desc="Fetching RSS Feeds"):
         try:
             feed = feedparser.parse(url)
-            feed_title = getattr(feed.feed, 'title', url)
+            feed_title = feed.feed.title if hasattr(feed.feed, 'title') else url
             for entry in feed.entries:
                 try:
                     pub_date_str = getattr(entry, 'published', None)
                     if not pub_date_str:
                         pub_date_struct = getattr(entry, 'published_parsed', None)
-                        pub_date = datetime(*pub_date_struct[:6]) if pub_date_struct else None
+                        if pub_date_struct:
+                            pub_date = datetime(*pub_date_struct[:6])
+                        else:
+                            continue
                     else:
                         pub_date = parse_date(pub_date_str)
                     if not pub_date or pub_date < cutoff_date:
@@ -168,7 +152,7 @@ def fetch_rss(feeds: List[str]) -> List[Dict]:
     return all_articles
 
 # #############################################################################
-# STEP 2: EXTRACT FULL TEXT (Parallel)
+# STEP 2: FULL TEXT EXTRACTION
 # #############################################################################
 
 def _process_article_text(article: Dict) -> Optional[Dict]:
@@ -180,19 +164,61 @@ def _process_article_text(article: Dict) -> Optional[Dict]:
             article["text"] = a.text
         except Exception:
             pass
-    return article if article["text"] and len(article["text"]) > 200 else None
+    if article["text"] and len(article["text"]) > 200:
+        return article
+    return None
 
 def extract_full_text_parallel(articles: List[Dict]) -> List[Dict]:
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         results = list(tqdm(
             executor.map(_process_article_text, articles),
             total=len(articles),
-            desc="Extracting Full Text (Parallel)"
+            desc="Extracting Full Text"
         ))
     return [res for res in results if res is not None]
 
 # #############################################################################
-# STEP 3: CLUSTER
+# STEP 3: KEYWORD & SEMANTIC FILTERING
+# #############################################################################
+
+def filter_for_sustainability(articles: List[Dict], sbert_model) -> List[Dict]:
+    # 1) Keyword filter
+    filtered_kw = []
+    for article in articles:
+        text = (article["title"] + " " + article["text"]).lower()
+        if any(k.lower() in text for k in SUSTAINABILITY_KEYWORDS):
+            filtered_kw.append(article)
+    print(f"{len(filtered_kw)} articles remain after keyword filtering.")
+
+    if not filtered_kw:
+        return []
+
+    # 2) Semantic filter (safer version)
+    MIN_SIMILARITY_THRESHOLD = 0.5
+    filtered_semantic = []
+
+    # Precompute sustainability embedding
+    sustainability_embedding = sbert_model.encode(
+        "sustainability environment climate green energy pollution carbon emission eco net-zero biodiversity",
+        convert_to_tensor=True
+    )
+
+    for article in filtered_kw:
+        try:
+            embedding = sbert_model.encode(article['text'], convert_to_tensor=True)
+            similarity = float(torch.cosine_similarity(embedding, sustainability_embedding))
+            if similarity >= MIN_SIMILARITY_THRESHOLD:
+                filtered_semantic.append(article)
+            else:
+                print(f"Excluded by semantic filter: {article['title']} (sim={similarity:.2f})")
+        except Exception as e:
+            print(f"Warning computing similarity for '{article['title']}': {e}")
+            filtered_semantic.append(article)  # fallback
+    print(f"{len(filtered_semantic)} articles remain after semantic filtering.")
+    return filtered_semantic
+
+# #############################################################################
+# STEP 4: CLUSTERING
 # #############################################################################
 
 def cluster_articles(articles: List[Dict], num_clusters: int, model: SentenceTransformer) -> List[Dict]:
@@ -209,48 +235,39 @@ def cluster_articles(articles: List[Dict], num_clusters: int, model: SentenceTra
     return articles
 
 # #############################################################################
-# STEP 4: SUMMARIZE
+# STEP 5: SUMMARIZATION
 # #############################################################################
 
 def summarize_clusters(articles: List[Dict], summarizer_pipeline) -> List[Dict]:
     clusters = {}
     for article in articles:
-        cluster_id = article["cluster_id"]
-        if cluster_id not in clusters:
-            clusters[cluster_id] = {"articles": [], "source_link": "", "summary": "", "image_url": None}
-        clusters[cluster_id]["articles"].append(article)
-    for cluster_id in clusters:
-        clusters[cluster_id]["articles"].sort(key=lambda x: x["date"], reverse=True)
-        most_recent_article = clusters[cluster_id]["articles"][0]
-        clusters[cluster_id]["source_link"] = most_recent_article["source"]
-        clusters[cluster_id]["image_url"] = most_recent_article["image_url"]
+        cid = article["cluster_id"]
+        if cid not in clusters:
+            clusters[cid] = {"articles": [], "source_link": "", "summary": "", "image_url": None}
+        clusters[cid]["articles"].append(article)
+
+    for cid, cluster_data in clusters.items():
+        cluster_data["articles"].sort(key=lambda x: x["date"], reverse=True)
+        if cluster_data["articles"]:
+            most_recent = cluster_data["articles"][0]
+            cluster_data["source_link"] = most_recent["source"]
+            cluster_data["image_url"] = most_recent["image_url"]
+
     MAX_SUMMARY_INPUT = 10000
-    for cluster_id, cluster_data in tqdm(clusters.items(), desc="Summarizing Clusters"):
+    for cid, cluster_data in tqdm(clusters.items(), desc="Summarizing Clusters"):
         combined_text = " ".join([a["text"] for a in cluster_data["articles"][:3]])
         if len(combined_text) > MAX_SUMMARY_INPUT:
             combined_text = combined_text[:MAX_SUMMARY_INPUT]
-        summary_text = "No summary available for this cluster."
         try:
-            summary = summarizer_pipeline(combined_text, max_length=150, min_length=30, do_sample=False)[0]["summary_text"]
-            summary_text = summary
+            summary = summarizer_pipeline(
+                combined_text, max_length=150, min_length=30, do_sample=False
+            )[0]["summary_text"]
+            cluster_data["summary"] = summary
         except Exception:
-            pass
-        cluster_data["summary"] = summary_text
-    return [clusters[key] for key in sorted(clusters.keys())]
+            cluster_data["summary"] = "No summary available for this cluster."
 
-# #############################################################################
-# STEP 5: SEMANTIC FILTER (OPTIONAL)
-# #############################################################################
-
-def semantic_filter_articles(articles: List[Dict], model: SentenceTransformer) -> List[Dict]:
-    ref_emb = model.encode([REFERENCE_TEXT], show_progress_bar=False)
-    filtered = []
-    for a in articles:
-        emb = model.encode([a['title'] + " " + a['text']], show_progress_bar=False)
-        similarity = (emb @ ref_emb.T).item()  # dot product if normalized
-        if similarity > SEMANTIC_THRESHOLD:
-            filtered.append(a)
-    return filtered
+    final_data = [clusters[key] for key in sorted(clusters.keys())]
+    return final_data
 
 # #############################################################################
 # MAIN
@@ -262,7 +279,7 @@ def main():
         sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
         summarizer_pipeline = pipeline("summarization", model="facebook/bart-large-cnn")
     except Exception as e:
-        print(f"FATAL: Could not load NLP models. {e}")
+        print(f"FATAL: Could not load NLP models: {e}")
         return
 
     print("--- 1. Fetching RSS Articles ---")
@@ -270,33 +287,32 @@ def main():
     save_json(RAW_JSON, articles)
     print(f"Fetched {len(articles)} raw articles.")
 
-    print("--- 2. Extracting Full Text (Parallel) ---")
+    print("--- 2. Extracting Full Text ---")
     articles = extract_full_text_parallel(articles)
     save_json(FILTERED_JSON, articles)
-    print(f"{len(articles)} articles with substantial text.")
+    print(f"{len(articles)} articles with substantial text after extraction.")
 
-    print("--- 2.5 Filtering for sustainability keywords ---")
-    articles = [a for a in articles if is_sustainability_article(a)]
-    print(f"{len(articles)} articles remain after keyword filtering.")
+    if not articles:
+        print("No articles to process. Exiting.")
+        save_json(CLUSTERED_JSON, [])
+        return
 
-    # Optional: semantic filter
-    print("--- 2.6 Optional semantic relevance filtering ---")
-    articles = semantic_filter_articles(articles, sbert_model)
-    print(f"{len(articles)} articles remain after semantic filtering.")
-
+    print("--- 3. Filtering for Sustainability ---")
+    articles = filter_for_sustainability(articles, sbert_model)
     if not articles:
         print("No sustainability articles found. Exiting.")
         save_json(CLUSTERED_JSON, [])
         return
 
-    print(f"--- 3. Clustering Articles into {NUM_CLUSTERS} Clusters ---")
+    print(f"--- 4. Clustering Articles into {NUM_CLUSTERS} Clusters ---")
     articles = cluster_articles(articles, NUM_CLUSTERS, sbert_model)
 
-    print("--- 4. Summarizing Clusters ---")
+    print("--- 5. Summarizing Clusters ---")
     final_data = summarize_clusters(articles, summarizer_pipeline)
     save_json(SUMMARIES_JSON, final_data)
     save_json(CLUSTERED_JSON, final_data)
-    print(f"Processed {len(final_data)} clusters.")
+
+    print(f"Successfully processed {len(final_data)} clusters.")
 
 if __name__ == "__main__":
     main()

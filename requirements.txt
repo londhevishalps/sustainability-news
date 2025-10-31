@@ -4,7 +4,9 @@ pandas
 scikit-learn
 sentence-transformers
 transformers
-torch
 tqdm
-gradio
-lxml_html_clean
+# torch is a large dependency required for the sentence-transformers and
+# transformers libraries. It should be installed with the appropriate
+# backend (e.g., torch[cpu] for CPU-only environments like GitHub Actions).
+# For simplicity in this file, we list the core dependency.
+torch

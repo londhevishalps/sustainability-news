@@ -1,9 +1,0 @@
-feedparser
-newspaper3k
-pandas
-scikit-learn
-sentence-transformers
-transformers
-tqdm
-torch
-lxml_html_clean

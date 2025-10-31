@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-sustainability_updates_improved.py
+sustainability_updates.py
 
 Flow:
 1) fetch RSS -> raw_articles.json
@@ -12,9 +12,7 @@ Improvements:
 - Robust date parsing for RSS feeds.
 - More robust image URL extraction.
 - Use of concurrent futures for parallel text extraction to speed up I/O-bound tasks.
-- Improved logging/error handling.
 - Centralized model loading to avoid re-initialization.
-- Cleaned up the main function for better flow.
 """
 
 import os
@@ -58,7 +56,7 @@ RSS_FEEDS = [
 # UTIL
 # #############################################################################
 
-def save_json(path: str, obj):
+def save_json(path: str, obj ):
     """Save an object to a JSON file."""
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
@@ -173,10 +171,10 @@ def fetch_rss(feeds: List[str]) -> List[Dict]:
                     }
                     all_articles.append(article)
                 except Exception as e:
-                    print(f"Warning: Error processing entry from {url}: {e}")
+                    # print(f"Warning: Error processing entry from {url}: {e}")
                     continue
         except Exception as e:
-            print(f"Error fetching feed {url}: {e}")
+            # print(f"Error fetching feed {url}: {e}")
             continue
 
     return all_articles
@@ -205,7 +203,6 @@ def _process_article_text(article: Dict) -> Optional[Dict]:
 
 def extract_full_text_parallel(articles: List[Dict]) -> List[Dict]:
     """Extracts full text content in parallel using a ThreadPoolExecutor."""
-    filtered_articles = []
     
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         # Map the processing function to all articles
@@ -299,7 +296,8 @@ def summarize_clusters(articles: List[Dict], summarizer_pipeline) -> List[Dict]:
             )[0]["summary_text"]
             summary_text = summary
         except Exception as e:
-            print(f"Warning: Error summarizing cluster {cluster_id}: {e}")
+            # print(f"Warning: Error summarizing cluster {cluster_id}: {e}")
+            pass
             
         cluster_data["summary"] = summary_text
 
@@ -338,12 +336,12 @@ def main():
     
     if not articles:
         print("No articles to process. Exiting.")
+        # Still write an empty list to clustered_articles.json so the frontend doesn't break
+        save_json(CLUSTERED_JSON, [])
         return
 
     print(f"--- 3. Clustering Articles into {NUM_CLUSTERS} Clusters ---")
     articles = cluster_articles(articles, NUM_CLUSTERS, sbert_model)
-    # Save the clustered articles (optional, for debugging)
-    # save_json(CLUSTERED_JSON, articles)
     
     print("--- 4. Summarizing Clusters ---")
     final_data = summarize_clusters(articles, summarizer_pipeline)

@@ -2,27 +2,36 @@
   {
     "articles": [
       {
-        "title": "Rare twins born in DRC raise cautious hope for endangered mountain gorillas",
-        "url": "https://www.theguardian.com/environment/2026/jan/17/twin-baby-mountain-gorilla-virunga-drc-survival-conservation-aoe",
-        "date": "2026-01-17",
+        "title": "From scorpions to peacocks: the species thriving in London’s hidden microclimates",
+        "url": "https://www.theguardian.com/uk-news/2026/jan/24/from-scorpions-to-peacocks-species-thriving-london-hidden-microclimates-britain-urban-jungle",
+        "date": "2026-01-24",
         "source": "Environment | The Guardian",
-        "text": "<p>Virunga park ranger says babies are well cared for by mother Mafuko but high infant mortality makes first weeks critical</p><p>It was noon by the time Jacques Katutu first saw the newborn mountain gorillas. Cradled in the arms of their mother, Mafuko, the tiny twins clung to her body for warmth in the forest clearing in Virunga national park, in eastern Democratic Republic of the Congo (DRC).</p><p>Katutu, head of gorilla monitoring in Virunga, has seen dozens of newborns in his 15 years as a ranger. But, he tells the Guardian, even he was touched by the sight of the fragile infant males, who face serious obstacles if they are to become silverbacks one day.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/17/twin-baby-mountain-gorilla-virunga-drc-survival-conservation-aoe\">Continue reading...</a>",
+        "text": "<p>An extraordinary mosaic of wildlife has made Britain’s urban jungle its home</p><p>London is the only place in the UK where you can find scorpions, snakes, turtles, seals, peacocks, falcons all in one city – and not London zoo. Step outside and you will encounter a patchwork of writhing, buzzing, bubbling urban microclimates.</p><p>Sam Davenport, the director of nature recovery at the London Wildlife Trust, emphasises the sheer variation in habitats that you find in UK cities, which creates an amazing “mosaic” of wildlife.</p> <a href=\"https://www.theguardian.com/uk-news/2026/jan/24/from-scorpions-to-peacocks-species-thriving-london-hidden-microclimates-britain-urban-jungle\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 0
+      },
+      {
+        "title": "‘We thought they would ignore us’: how humans are changing the way raptors behave",
+        "url": "https://www.theguardian.com/environment/2026/jan/19/we-thought-they-would-ignore-us-how-humans-are-changing-the-way-raptors-behave",
+        "date": "2026-01-19",
+        "source": "Environment | The Guardian",
+        "text": "<p>Experts call for tighter regulation as GPS tracking reveals how people’s behaviour affects the lives of some of the world’s largest birds</p><p>Many people look up to admire the silhouette of raptors, some of the planet’s largest birds, soaring through seemingly empty skies. But increasingly, research shows us that this fascination runs both ways. From high above, these birds are watching us too.</p><p>Thanks to the development of tiny GPS tracking devices attached to their bodies, researchers are getting millions of data points on the day-to-day lives of these apex predators of the skies, giving us greater insight into where they hunt and rest, and how they die.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/19/we-thought-they-would-ignore-us-how-humans-are-changing-the-way-raptors-behave\">Continue reading...</a>",
         "image_url": null,
         "cluster_id": 0
       }
     ],
     "source_link": "Environment | The Guardian",
-    "summary": "Jacques Katutu, head of gorilla monitoring in Virunga, has seen dozens of newborns in his 15 years as a ranger. But, he tells the Guardian, even he was touched by the sight of the fragile infant males.",
+    "summary": "London is the only place in the UK where you can find scorpions, snakes, turtles, seals, peacocks, falcons all in one city – and not London zoo. Step outside and you will encounter a patchwork of writhing, buzzing, bubbling urban microclimates.",
     "image_url": null
   },
   {
     "articles": [
       {
-        "title": "Indonesia takes action against mining firms after floods devastate population of world’s rarest ape",
-        "url": "https://www.theguardian.com/environment/2026/jan/23/tapanuli-orangutans-floods-indonesia-government-mining-extraction-companies-aoe",
-        "date": "2026-01-23",
+        "title": "‘We cannot say for sure these wolves come from Russia’: Finns try to fathom cause of record reindeer deaths",
+        "url": "https://www.theguardian.com/environment/2026/jan/24/finland-russian-wolves-blamed-record-reindeer-deaths-ukraine-war-aoe",
+        "date": "2026-01-24",
         "source": "Environment | The Guardian",
-        "text": "<p>Conservationists hail the ‘desperately needed’ measures and urge greater protection after up to 11% of endangered Tapanuli orangutans wiped out</p><p>The floods and landslides that tore through Indonesia’s fragile Batang Toru ecosystem in November 2024 – killing up to 11% of the world’s Tapanuli orangutan population – prompted widespread scrutiny of the extractive companies operating in the area at the time of the ecological catastrophe.</p><p>For weeks, investigators searched for evidence that the companies may have damaged the Batang Toru and Garoga watersheds before the disaster, which washed torrents of mud and logs into villages, <a href=\"https://www.earthsight.org.uk/news/sumatra-floods\">claiming the lives of more than 1,100 people</a>.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/23/tapanuli-orangutans-floods-indonesia-government-mining-extraction-companies-aoe\">Continue reading...</a>",
+        "text": "<p>Wolves killed more than 2,100 reindeer in Finland last year, and herders are blaming the Ukraine war</p><p>Juha Kujala no longer knows how many reindeer will return to his farm from the forest each December. The 54-year-old herder releases his animals into the wilderness on the 830-mile Finnish-Russian border each spring to grow fat on lichens, grass and mushrooms, just as his ancestors have done for generations.</p><p>But since 2022, grisly discoveries of reindeer skeletons on the forest floor have disrupted this ancient way of life. The culprits, according to Kujala: wolves from Russia.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/24/finland-russian-wolves-blamed-record-reindeer-deaths-ukraine-war-aoe\">Continue reading...</a>",
         "image_url": null,
         "cluster_id": 1
       },
@@ -41,15 +50,6 @@
         "date": "2026-01-22",
         "source": "Environment | The Guardian",
         "text": "<p>Described by one researcher as looking ‘already dead’, the enigmatic creatures are one of the least understood species on the planet</p><p></p><p>It looks more like a worn sock than a fearsome predator. It moves slower than an escalator. By most accounts, it is a clumsy and near-sightless relic drifting in the twilight waters of the Arctic, lazily searching for food scraps.</p><p>The Greenland shark, an animal one researcher (lovingly) said, “looks like it’s already dead”, is also one of the least understood, biologically enigmatic species on the planet.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/22/greenland-sharks-not-blind-discovery-arctic-research\">Continue reading...</a>",
-        "image_url": null,
-        "cluster_id": 1
-      },
-      {
-        "title": "Huge amounts of extra land needed for RFK Jr’s meat-heavy diet guidelines",
-        "url": "https://www.theguardian.com/environment/2026/jan/20/rfk-jr-trump-meat-diet-guidelines-land",
-        "date": "2026-01-20",
-        "source": "Environment | The Guardian",
-        "text": "<p>Even 25% increase in meat and dairy consumption would require 100m more acres of agricultural land, analysis says</p><p>The <a href=\"https://www.theguardian.com/us-news/trump-administration\">Trump administration</a>’s new dietary <a href=\"https://www.theguardian.com/us-news/2026/jan/17/rfk-jr-new-dietary-guidelines-health\">guidelines</a> urging Americans to eat far more meat and dairy products will, if followed, come at a major cost to the planet via huge swathes of habitat razed for farmland and millions of tons of extra planet-heating <a href=\"https://www.theguardian.com/environment/carbon-emissions\">emissions</a>.</p><p>A new inverted food <a href=\"https://cdn.realfood.gov/DGA.pdf\">pyramid</a> recently released by Donald Trump’s health department emphasizes pictures of steak, poultry, ground beef and whole milk, alongside fruits and vegetables, as the most important foods to eat.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/20/rfk-jr-trump-meat-diet-guidelines-land\">Continue reading...</a>",
         "image_url": null,
         "cluster_id": 1
       },
@@ -79,57 +79,39 @@
         "text": "<p>Amateur conservationist and social media influencer Theerasak 'Pop' Saksritawee has a rare bond with Thailand’s critically endangered dugongs. With dugong fatalities increasing, Pop works alongside scientists at Phuket Marine Biological Centre to track the mammals with his drone and restore their disappearing seagrass habitat. Translating complex science for thousands online, Pop raises an urgent alarm about climate change, pollution and habitat loss — before Thailand’s dugongs vanish forever</p> <a href=\"https://www.theguardian.com/science/video/2026/jan/20/the-influencer-racing-to-save-thailands-most-endangered-sea-mammal\">Continue reading...</a>",
         "image_url": null,
         "cluster_id": 1
-      },
-      {
-        "title": "‘We thought they would ignore us’: how humans are changing the way raptors behave",
-        "url": "https://www.theguardian.com/environment/2026/jan/19/we-thought-they-would-ignore-us-how-humans-are-changing-the-way-raptors-behave",
-        "date": "2026-01-19",
-        "source": "Environment | The Guardian",
-        "text": "<p>Experts call for tighter regulation as GPS tracking reveals how people’s behaviour affects the lives of some of the world’s largest birds</p><p>Many people look up to admire the silhouette of raptors, some of the planet’s largest birds, soaring through seemingly empty skies. But increasingly, research shows us that this fascination runs both ways. From high above, these birds are watching us too.</p><p>Thanks to the development of tiny GPS tracking devices attached to their bodies, researchers are getting millions of data points on the day-to-day lives of these apex predators of the skies, giving us greater insight into where they hunt and rest, and how they die.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/19/we-thought-they-would-ignore-us-how-humans-are-changing-the-way-raptors-behave\">Continue reading...</a>",
-        "image_url": null,
-        "cluster_id": 1
       }
     ],
     "source_link": "Environment | The Guardian",
-    "summary": "Up to 11% of the world’s Tapanuli orangutan population were wiped out in November 2024. The floods and landslides prompted widespread scrutiny of extractive companies operating in the area.",
+    "summary": "Wolves killed more than 2,100 reindeer in Finland last year, and herders are blaming the Ukraine war. The Greenland shark is one of the least understood, biologically enigmatic species on the planet.",
     "image_url": null
   },
   {
     "articles": [
       {
-        "title": "MPs ask Serious Fraud Office to investigate UK home insulation sector",
-        "url": "https://www.theguardian.com/environment/2026/jan/23/mps-ask-sfo-investigate-uk-home-insulation-sector",
+        "title": "Put north of England ‘front and centre’ of net zero strategy, Reeves urged",
+        "url": "https://www.theguardian.com/environment/2026/jan/23/north-england-net-zero-growth-strategy-rachel-reeves",
         "date": "2026-01-23",
         "source": "Environment | The Guardian",
-        "text": "<p>More than 30,000 households left with defects after ‘catastrophic failure’ of Tory government schemes</p><p>Members of parliament have called for the Serious Fraud Office to investigate the UK’s home insulation sector, after thousands of householders suffered ruined homes, big financial losses and months of disruption from the “clear and catastrophic failure” of two Conservative government schemes.</p><p>More than 30,000 households were left with defects, some of them severe, including mould, water ingress and damage to the fabric of walls, with about 3,000 dwellings so badly damaged they presented immediate health and safety risks to occupants.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/23/mps-ask-sfo-investigate-uk-home-insulation-sector\">Continue reading...</a>",
+        "text": "<p>Region has higher share of net zero economic output, data shows, and Labour leaders fear Reform would dismantle industry if it wins power</p><p>Rachel Reeves has been urged to put the north of England at the heart of the UK’s net zero strategy as research shows the sector contributes a larger share of the region’s economy than it does nationally.</p><p>The Labour peer Julie Elliott said the north must be “front and centre” of the Treasury’s growth strategy for clean energy.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/23/north-england-net-zero-growth-strategy-rachel-reeves\">Continue reading...</a>",
         "image_url": null,
         "cluster_id": 2
       },
       {
-        "title": "Senators urge Ford to disclose suspected lobbying over Trump’s climate rollbacks",
-        "url": "https://www.theguardian.com/us-news/2026/jan/22/senate-ford-trump-climate-rollbacks",
-        "date": "2026-01-22",
-        "source": "Environment | The Guardian",
-        "text": "<p>Sheldon Whitehouse adds auto giant to investigation after US president claimed CEO requests changes to regulations</p><p>As the Trump administration prepares to overturn the rule underpinning virtually all US climate regulations, a Senate committee is investigating whether the US’s second-largest automaker lobbied for the rollback.</p><p>In September, the Senate environment and public works committee launched investigations into two dozen oil companies, thinktanks, law firms and trade associations, focused on how the companies may have persuaded the White House to initiate the repeal of the 2009 endangerment finding. Now, the committee, chaired by the Rhode Island senator Sheldon Whitehouse, is expanding the investigation to include Ford Motor Company.</p> <a href=\"https://www.theguardian.com/us-news/2026/jan/22/senate-ford-trump-climate-rollbacks\">Continue reading...</a>",
-        "image_url": null,
-        "cluster_id": 2
-      },
-      {
-        "title": "Government admits its approval for Buckinghamshire AI datacentre should be quashed",
-        "url": "https://www.theguardian.com/politics/2026/jan/22/government-ai-datacentre-approval-quashed",
-        "date": "2026-01-22",
-        "source": "Environment | The Guardian",
-        "text": "<p>Campaigners hail U-turn during legal challenge over proposed centre an ‘embarrassing climbdown’</p><p>The government has been forced to admit its own planning approval for a major AI datacentre should be quashed after it failed to fully consider the climate impact, in what campaigners described as “an embarrassing climbdown”.</p><p>Angela Rayner, the former deputy prime minister, had overruled opposition from a local council to grant permission for a hyperscale datacentre on greenbelt land by the M25 in <a href=\"https://www.theguardian.com/uk-news/buckinghamshire\">Buckinghamshire</a> in line with Labour’s pledge to enable faster private investment in AI. But her successor, Steve Reed, has admitted the reasons for not requiring an environmental impact assessment were “inadequate” and that “permission should be quashed”.</p> <a href=\"https://www.theguardian.com/politics/2026/jan/22/government-ai-datacentre-approval-quashed\">Continue reading...</a>",
-        "image_url": null,
-        "cluster_id": 2
-      },
-      {
-        "title": "Scientific rigour and the dangers of microplastics | Letters",
-        "url": "https://www.theguardian.com/environment/2026/jan/21/scientific-rigour-and-the-dangers-of-microplastics",
+        "title": "Nvidia's Jensen Huang says AI robotics is a 'once-in-a-generation' opportunity for Europe",
+        "url": "https://www.cnbc.com/2026/01/21/nvidia-jensen-huang-robotics-opportunity-europe-.html",
         "date": "2026-01-21",
-        "source": "Environment | The Guardian",
-        "text": "<p><strong>Joe Yates</strong>, <strong>Prof Philip J Landrigan</strong>, <strong>Prof Jennifer Kirwan</strong> and <strong>Prof Jamie Davies </strong>respond to an article on doubts raised about studies on microplastics in the human body</p><p>While it may be a belated Christmas present for the petrochemical industry, your article (<a href=\"https://www.theguardian.com/environment/2026/jan/13/microplastics-human-body-doubt\">‘A bombshell’: doubt cast on discovery of microplastics throughout human body, 13 January</a>) was less surprising to the scientific community, where <a href=\"https://www.nature.com/articles/d41586-025-00702-2\">constructive debate</a> around microplastic detection in humans has been ongoing for some time. Such debate is entirely normal – and essential – for scientific inquiry.</p><p>New and novel methods must be tried, tested, critiqued, improved and tried again. Science is incremental and gradual – unlike the uncapped production and pollution of plastics, which contain thousands of hazardous chemicals. Decades of robust evidence demonstrates the harms that these&nbsp;inflict on people and planet.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/21/scientific-rigour-and-the-dangers-of-microplastics\">Continue reading...</a>",
+        "source": "Energy",
+        "text": "In this article NVDA\n\nSIE-DE\n\nMBG-DE\n\nVOLV.B-SE\n\nVOLAF\n\nSHA-DE\n\nTSLA\n\nGOOGL Follow your favorite stocks CREATE FREE ACCOUNT\n\nNvidia chief Jensen Huang said that AI robotics is a \"once-in-a-generation\" opportunity for Europe as the region boasts an industrial manufacturing base that is \"incredibly strong.\" \"You can now fuse your industrial capability, your manufacturing capability, with artificial intelligence, and that brings you into the world of physical AI, or robotics,\" he said in an address at the World Economic Forum in Davos on Wednesday. It presents an opportunity to \"leap past\" the era of software, he added, which has been led by the U.S.\n\nRise of AI robotics\n\nAttention across the industrial and tech sectors has increasingly shifted to autonomous robotics as recent advances in AI promise more capabilities. European industrial and manufacturing giants, including Siemens , Mercedes-Benz Group , Volvo and Schaeffler , have all announced robotics projects and partnerships with robotics tech companies in the past year. Big Tech companies have also been doubling down in the space. Tesla CEO Elon Musk said 80% of the company's value would come from its Optimus humanoid robots in September, Google's AI division DeepMind released AI models for robotics in 2025, and Nvidia announced partnerships with Alphabet to work on physical AI in March. Tech investors have taken note. Companies building robotics raised a record $26.5 billion in 2025, according to deal counting platform Dealroom.\n\nGetting serious about energy\n\nTo take advantage of the opportunity in AI, Europe has to \"get serious\" about its energy supply so that it can invest in the infrastructure layer, Huang said. The region has some of the highest energy costs in the world. Microsoft boss Satya Nadella said energy costs will be a key factor in determining how successful countries are in the AI race at WEF on Tuesday.\n\nwatch now",
         "image_url": null,
+        "cluster_id": 2
+      },
+      {
+        "title": "Will AI kickstart a new age of nuclear power?",
+        "url": "https://news.un.org/feed/view/en/story/2026/01/1166768",
+        "date": "2026-01-17",
+        "source": "UN News - Global perspective Human stories",
+        "text": "The rapidly expanding use of artificial intelligence worldwide is putting electrical grids under huge pressure and many believe that, to meet that need without contributing to the climate crisis, a full-scale expansion of nuclear energy is essential.",
+        "image_url": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/05-06-2025-Unsplash-data-centre-01.jpg/image560x340cropped.jpg",
         "cluster_id": 2
       },
       {
@@ -143,44 +125,46 @@
       }
     ],
     "source_link": "Environment | The Guardian",
-    "summary": "More than 30,000 households left with defects after ‘catastrophic failure’ of Tory government schemes. About 3,000 dwellings so badly damaged they presented immediate health and safety risks to occupants.",
+    "summary": "Research shows the north of England contributes a larger share of the region’s economy than it does nationally. Labour peer Julie Elliott said the north must be “front and centre” of the Treasury's growth strategy for clean energy. Nvidia chief Jensen Huang said that AI robotics is a \"once-in-a-generation\" opportunity for Europe.",
     "image_url": null
   },
   {
     "articles": [
       {
-        "title": "Nvidia's Jensen Huang says AI robotics is a 'once-in-a-generation' opportunity for Europe",
-        "url": "https://www.cnbc.com/2026/01/21/nvidia-jensen-huang-robotics-opportunity-europe-.html",
-        "date": "2026-01-21",
-        "source": "Energy",
-        "text": "In this article NVDA\n\nSIE-DE\n\nMBG-DE\n\nVOLV.B-SE\n\nVOLAF\n\nSHA-DE\n\nTSLA\n\nGOOGL Follow your favorite stocks CREATE FREE ACCOUNT\n\nNvidia chief Jensen Huang said that AI robotics is a \"once-in-a-generation\" opportunity for Europe as the region boasts an industrial manufacturing base that is \"incredibly strong.\" \"You can now fuse your industrial capability, your manufacturing capability, with artificial intelligence, and that brings you into the world of physical AI, or robotics,\" he said in an address at the World Economic Forum in Davos on Wednesday. It presents an opportunity to \"leap past\" the era of software, he added, which has been led by the U.S.\n\nRise of AI robotics\n\nAttention across the industrial and tech sectors has increasingly shifted to autonomous robotics as recent advances in AI promise more capabilities. European industrial and manufacturing giants, including Siemens , Mercedes-Benz Group , Volvo and Schaeffler , have all announced robotics projects and partnerships with robotics tech companies in the past year. Big Tech companies have also been doubling down in the space. Tesla CEO Elon Musk said 80% of the company's value would come from its Optimus humanoid robots in September, Google's AI division DeepMind released AI models for robotics in 2025, and Nvidia announced partnerships with Alphabet to work on physical AI in March. Tech investors have taken note. Companies building robotics raised a record $26.5 billion in 2025, according to deal counting platform Dealroom.\n\nGetting serious about energy\n\nTo take advantage of the opportunity in AI, Europe has to \"get serious\" about its energy supply so that it can invest in the infrastructure layer, Huang said. The region has some of the highest energy costs in the world. Microsoft boss Satya Nadella said energy costs will be a key factor in determining how successful countries are in the AI race at WEF on Tuesday.\n\nwatch now",
+        "title": "RHS unveils plans to protect UK gardens from future water shortages",
+        "url": "https://www.theguardian.com/environment/2026/jan/24/rhs-unveils-plans-to-protect-uk-gardens-from-future-water-shortages",
+        "date": "2026-01-24",
+        "source": "Environment | The Guardian",
+        "text": "<p>Environmental charity to prioritise water capture and storage as it urges gardeners to prepare for ‘new normal’</p><p>The Royal Horticultural Society has unveiled emergency plans to protect its gardens from <a href=\"https://www.theguardian.com/environment/2025/nov/30/water-shortages-could-derail-uk-net-zero-plans-study-finds\">major water shortages</a> in the future.</p><p>The environmental charity, which owns and operates five renowned public gardens in England, said on Saturday it will invest in more water-capture and water-management projects in 2026 after severe droughts last year.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/24/rhs-unveils-plans-to-protect-uk-gardens-from-future-water-shortages\">Continue reading...</a>",
         "image_url": null,
         "cluster_id": 3
       },
       {
-        "title": "Will AI kickstart a new age of nuclear power?",
-        "url": "https://news.un.org/feed/view/en/story/2026/01/1166768",
-        "date": "2026-01-17",
-        "source": "UN News - Global perspective Human stories",
-        "text": "The rapidly expanding use of artificial intelligence worldwide is putting electrical grids under huge pressure and many believe that, to meet that need without contributing to the climate crisis, a full-scale expansion of nuclear energy is essential.",
-        "image_url": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/05-06-2025-Unsplash-data-centre-01.jpg/image560x340cropped.jpg",
-        "cluster_id": 3
-      }
-    ],
-    "source_link": "Energy",
-    "summary": " AI robotics is a \"once-in-a-generation\" opportunity for Europe, Nvidia chief Jensen Huang said. It presents an opportunity to \"leap past\" the era of software, he added. Attention across the industrial and tech sectors has increasingly shifted to autonomous robotics as recent advances in AI promise more capabilities.",
-    "image_url": null
-  },
-  {
-    "articles": [
-      {
-        "title": "Water-related violence almost doubled globally in two years, thinktank says",
-        "url": "https://www.theguardian.com/environment/2026/jan/23/water-related-violence-increase-pacific-institute",
+        "title": "Privatisation not the problem for England’s water, says author of review",
+        "url": "https://www.theguardian.com/environment/2026/jan/23/privatisation-not-the-problem-for-englands-water-says-author-of-review",
         "date": "2026-01-23",
         "source": "Environment | The Guardian",
-        "text": "<p>Experts say climate crisis, corruption and lack or misuse of infrastructure among factors driving water conflicts</p><p>Water-related violence has almost doubled since 2022 and little is being done to understand and address the trend and prevent new and escalating risks, experts have said.</p><p>There were 419 incidents of water-related violence recorded in 2024, up from 235 in 2022, according to the Pacific Institute, a US-based thinktank.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/23/water-related-violence-increase-pacific-institute\">Continue reading...</a>",
+        "text": "<p>Architect of government’s water plan says nationalisation might not fix everything and the current system can work</p><p>The privatisation of water in England is not the reason for its failings, the architect of the government’s water plan has said, as he warned there was no one “simple solution” such as nationalisation.</p><p>Sir Jon Cunliffe, a former Bank of England deputy governor who was involved in reforming banking regulation after the 2008 financial crisis, was enlisted by the Labour government to write a report on the water industry. He was tasked with addressing problems such as the sewage scandal, frequent tap water outages and lack of <a href=\"https://www.theguardian.com/news/ng-interactive/2025/aug/17/how-can-england-possibly-be-running-out-of-water\">preparedness for drought</a>.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/23/privatisation-not-the-problem-for-englands-water-says-author-of-review\">Continue reading...</a>",
         "image_url": null,
-        "cluster_id": 4
+        "cluster_id": 3
+      },
+      {
+        "title": "'The world's ugliest lawn' isn't really that ugly, according to its Australian owner  – video",
+        "url": "https://www.theguardian.com/australia-news/video/2026/jan/24/the-worlds-ugliest-lawn-isnt-really-that-ugly-according-to-its-australian-owner-video",
+        "date": "2026-01-23",
+        "source": "Environment | The Guardian",
+        "text": "<p>Jarno Coone, the winner of the international 'world's ugliest lawn' competition, says he doesn't let his garden grow wild to annoy his neighbours in the regional Victorian town of Kyneton. He says he is 'proud to get the message out there for water conservation and living more harmoniously with nature'. 'I really do believe it is better for the environment,' he says</p> <a href=\"https://www.theguardian.com/australia-news/video/2026/jan/24/the-worlds-ugliest-lawn-isnt-really-that-ugly-according-to-its-australian-owner-video\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 3
+      },
+      {
+        "title": "Senators urge Ford to disclose suspected lobbying over Trump’s climate rollbacks",
+        "url": "https://www.theguardian.com/us-news/2026/jan/22/senate-ford-trump-climate-rollbacks",
+        "date": "2026-01-22",
+        "source": "Environment | The Guardian",
+        "text": "<p>Sheldon Whitehouse adds auto giant to investigation after US president claimed CEO requests changes to regulations</p><p>As the Trump administration prepares to overturn the rule underpinning virtually all US climate regulations, a Senate committee is investigating whether the US’s second-largest automaker lobbied for the rollback.</p><p>In September, the Senate environment and public works committee launched investigations into two dozen oil companies, thinktanks, law firms and trade associations, focused on how the companies may have persuaded the White House to initiate the repeal of the 2009 endangerment finding. Now, the committee, of which the ranking member is the Democratic Rhode Island senator Sheldon Whitehouse, is expanding the investigation to include Ford Motor Company.</p> <a href=\"https://www.theguardian.com/us-news/2026/jan/22/senate-ford-trump-climate-rollbacks\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 3
       },
       {
         "title": "What happens when the taps run dry? England is about to find out | Aditya Chakrabortty",
@@ -189,11 +173,45 @@
         "source": "Environment | The Guardian",
         "text": "<p>It’s not just Tunbridge Wells – a country famous around the world for its rain is in danger of self-imposed drought</p><p>You get up and go to the loo, only to find the flush doesn’t work. You try the shower, except nothing comes out. You want a glass of water, but on turning the tap there is not a drop. Your day stumbles on, stripped of its essentials: no washing hands, no cleaning up the baby, neither tea nor coffee, no easy way to do the dishes or the laundry. Dirt accumulates; tempers fray.</p><p>The water company texts: we are so sorry; colleagues are working to restore connection; everything should soon be normal. You want to believe them, but the more it’s repeated, the more it becomes a kind of hold music. There’s no supply the next day, and the day after, and the day after that. Each morning brings with it the same chest-tightening question: what will happen today? Buckets and bottles don’t stop you feeling grubby and smelly, or from noticing the taint on your family and friends and neighbours. You’re not quite the people you thought you were and nothing feels normal.</p><p>Aditya Chakrabortty is a Guardian columnist</p> <a href=\"https://www.theguardian.com/commentisfree/2026/jan/22/what-happens-england-water-run-out-drought-tunbridge-wells\">Continue reading...</a>",
         "image_url": null,
+        "cluster_id": 3
+      },
+      {
+        "title": "Huge amounts of extra land needed for RFK Jr’s meat-heavy diet guidelines",
+        "url": "https://www.theguardian.com/environment/2026/jan/20/rfk-jr-trump-meat-diet-guidelines-land",
+        "date": "2026-01-20",
+        "source": "Environment | The Guardian",
+        "text": "<p>Even 25% increase in meat and dairy consumption would require 100m more acres of agricultural land, analysis says</p><p>The <a href=\"https://www.theguardian.com/us-news/trump-administration\">Trump administration</a>’s new dietary <a href=\"https://www.theguardian.com/us-news/2026/jan/17/rfk-jr-new-dietary-guidelines-health\">guidelines</a> urging Americans to eat far more meat and dairy products will, if followed, come at a major cost to the planet via huge swathes of habitat razed for farmland and millions of tons of extra planet-heating <a href=\"https://www.theguardian.com/environment/carbon-emissions\">emissions</a>.</p><p>A new inverted food <a href=\"https://cdn.realfood.gov/DGA.pdf\">pyramid</a> recently released by Donald Trump’s health department emphasizes pictures of steak, poultry, ground beef and whole milk, alongside fruits and vegetables, as the most important foods to eat.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/20/rfk-jr-trump-meat-diet-guidelines-land\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 3
+      }
+    ],
+    "source_link": "Environment | The Guardian",
+    "summary": "The Royal Horticultural Society has unveiled emergency plans to protect its gardens from water shortages. The environmental charity will invest in more water-capture and water-management projects in 2026.",
+    "image_url": null
+  },
+  {
+    "articles": [
+      {
+        "title": "Trump says the big US winter storm is proof of climate hoax – here’s why he’s wrong",
+        "url": "https://www.theguardian.com/us-news/2026/jan/23/trump-winter-storm-climate-crisis",
+        "date": "2026-01-23",
+        "source": "Environment | The Guardian",
+        "text": "<p>US president asks ‘whatever happened to global warming?’ Well, it could be making our winter storms worse</p><p><a href=\"https://www.theguardian.com/us-news/donaldtrump\">Donald Trump</a> has erroneously cited an enormous winter storm that is set to deliver freezing temperatures and heavy snow to half of the US as supposed proof that the world is not heating up due to the burning of <a href=\"https://www.theguardian.com/environment/fossil-fuels\">fossil fuels</a>.</p><p>Trump, who has repeatedly questioned and mocked established climate science in the past, <a href=\"https://truthsocial.com/@realDonaldTrump/posts/115944376084632033\">posted</a> of the storm on Truth Social: “Rarely seen anything like it before. Could the Environmental Insurrectionists please explain – WHATEVER HAPPENED TO GLOBAL WARMING???”</p> <a href=\"https://www.theguardian.com/us-news/2026/jan/23/trump-winter-storm-climate-crisis\">Continue reading...</a>",
+        "image_url": null,
+        "cluster_id": 4
+      },
+      {
+        "title": "Scientific rigour and the dangers of microplastics | Letters",
+        "url": "https://www.theguardian.com/environment/2026/jan/21/scientific-rigour-and-the-dangers-of-microplastics",
+        "date": "2026-01-21",
+        "source": "Environment | The Guardian",
+        "text": "<p><strong>Joe Yates</strong>, <strong>Prof Philip J Landrigan</strong>, <strong>Prof Jennifer Kirwan</strong> and <strong>Prof Jamie Davies </strong>respond to an article on doubts raised about studies on microplastics in the human body</p><p>While it may be a belated Christmas present for the petrochemical industry, your article (<a href=\"https://www.theguardian.com/environment/2026/jan/13/microplastics-human-body-doubt\">‘A bombshell’: doubt cast on discovery of microplastics throughout human body, 13 January</a>) was less surprising to the scientific community, where <a href=\"https://www.nature.com/articles/d41586-025-00702-2\">constructive debate</a> around microplastic detection in humans has been ongoing for some time. Such debate is entirely normal – and essential – for scientific inquiry.</p><p>New and novel methods must be tried, tested, critiqued, improved and tried again. Science is incremental and gradual – unlike the uncapped production and pollution of plastics, which contain thousands of hazardous chemicals. Decades of robust evidence demonstrates the harms that these&nbsp;inflict on people and planet.</p> <a href=\"https://www.theguardian.com/environment/2026/jan/21/scientific-rigour-and-the-dangers-of-microplastics\">Continue reading...</a>",
+        "image_url": null,
         "cluster_id": 4
       }
     ],
     "source_link": "Environment | The Guardian",
-    "summary": "There were 419 incidents of water-related violence recorded in 2024, up from 235 in 2022. Climate crisis, corruption and lack or misuse of infrastructure among factors driving water conflicts.",
+    "summary": "Donald Trump erroneously cited an enormous winter storm that is set to deliver freezing temperatures and heavy snow to half of the US. He said: “Rarely seen anything like it before. Could the Environmental Insurrectionists please explain – WHATEVER HAPPENED to GLOBAL WARMING???”",
     "image_url": null
   }
 ]
